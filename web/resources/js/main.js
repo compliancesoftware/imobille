@@ -491,15 +491,14 @@ $('document').ready(function(){
 
         $('.header').css('transform','translateY('+transformation+'px)');
         $('.cover').css('transform','translateY('+transformation+'px)');
-        $('.cover').css('filter','blur('+(transformation+10)+'px)');
 
         $('.header').css('opacity',''+opacity);
         $('.cover').css('opacity',''+opacity);
 
-        if(window.scrollY >= 182) {
+        if(window.scrollY >= 179) {
             $('.menus').css('position','fixed');
             $('.menus').css('margin-top','2rem');
-            $('.content-render').css('padding-top','5rem');
+            $('.content-render').css('padding-top','3.5rem');
             $('#navbar-toggle-btn').css('background-color','black');
         }
         else {
