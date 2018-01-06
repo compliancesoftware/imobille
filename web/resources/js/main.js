@@ -497,6 +497,8 @@ $('document').ready(function(){
 
         if(window.scrollY >= 179) {
             $('.menus').css('position','fixed');
+            $('.menus').css('top','0');
+            $('.menus').css('left','0');
             $('.menus').css('margin-top','2rem');
             $('.content-render').css('padding-top','3.5rem');
             $('#navbar-toggle-btn').css('background-color','black');
@@ -504,6 +506,8 @@ $('document').ready(function(){
         else {
             $('.menus').css('position','relative');
             $('.menus').css('margin-top','0.3rem');
+            $('.menus').css('top','unset');
+            $('.menus').css('left','unset');
             $('.content-render').css('padding-top','');
             $('#navbar-toggle-btn').css('background-color','transparent');
         }
