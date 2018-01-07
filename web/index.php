@@ -38,45 +38,45 @@
         <script src='resources/js/jquery-ui.js'></script>
         <script type='text/javascript' src='resources/js/slick/slick.js'></script>
         <script type='text/javascript' src='resources/js/models/contato.js'></script>
-        <script type='text/javascript' src='resources/js/models/resumo.js'></script>
-        <script type='text/javascript' src='resources/js/models/sobre.js'></script>
-        <script type='text/javascript' src='resources/js/models/resposta.js'></script>
-        <script type='text/javascript' src='resources/js/models/comentario.js'></script>
-        <script type='text/javascript' src='resources/js/models/foto.js'></script>
-        <script type='text/javascript' src='resources/js/models/video.js'></script>
         <script type='text/javascript' src='resources/js/main.js'></script>
 
     </head>
     <body>
         <div class="page">
-            <div id="navbar-toggle-btn" class="navbar-toggle-btn">
-                <i class="fa fa-navicon" aria-hidden="true"></i>
+            <div class="navbar-toggle-btn">
+                <i class="fa fa-navicon" aria-hidden="true" onclick="toggleNavBar();"></i>
+                <i class="fa fa-user-circle login-btn" aria-hidden="true" onclick="changePage('/login');"></i>
             </div>
             <div class="navbar">
-                <div class="navbar-toggle-btn">
-                    <i class="fa fa-bars" aria-hidden="true"></i>
-                </div>
-                <div class="nav-item" id="link-home">
+                <div class="nav-item" id="link-home" onclick="changePage('');">
                     <i class="fa fa-home" aria-hidden="true"></i>
                     <p>Home</p>
                 </div>
-                <div class="nav-item" id="link-fotos">
-                    <i class="fa fa-camera" aria-hidden="true"></i>
-                    <p>Fotos</p>
+                <div class="nav-item" id="link-lancamentos" onclick="clickLancamentos(this);">
+                    <i class="fa fa-building-o" aria-hidden="true"></i>
+                    <p>Lançamentos</p>
                 </div>
-                <div class="nav-item" id="link-videos">
-                    <i class="fa fa-video-camera" aria-hidden="true"></i>
-                    <p>Vídeos</p>
+                <div class="nav-item" id="link-usados" onclick="clickUsados(this);">
+                    <i class="fa fa-handshake-o" aria-hidden="true"></i>
+                    <p>Usados</p>
                 </div>
-                <div class="nav-item" id="link-baixe-app" onclick="window.location.href = 'https://play.google.com/store/apps/details?id=com.sexlog.sexlogcam&hl=pt_BR';">
-                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                    <p>Baixe o App</p>
+                <div class="nav-item" id="link-aluguel"  onclick="clickAluguel(this);">
+                    <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                    <p>Aluguel</p>
                 </div>
-                <div class="nav-item" id="link-contato">
+                <div class="nav-item" id="link-cadastro" onclick="changePage('/cadastro');">
+                    <i class="fa fa-bell-o" aria-hidden="true"></i>
+                    <p>Cadastre-se</p>
+                </div>
+                <div class="nav-item" id="link-contato" onclick="clickContato();">
                     <i class="fa fa-phone" aria-hidden="true"></i>
-                    <p>Contato</p>
+                    <p>Entre em contato</p>
                 </div>
                 <div class="contatos"></div>
+                <div class="nav-item" id="link-sobre" onclick="changePage('/sobre');">
+                    <i class="fa fa-question" aria-hidden="true"></i>
+                    <p>Sobre nós</p>
+                </div>
                 <div class="nav-footer">
                     <p>by:</p>
                     <a href="http://compliancehome.herokuapp.com/">Compliance Software&reg;</a>
@@ -86,28 +86,13 @@
                 <div class="pelicula"></div>
                 <div class="header">
                     <div class="header-img" style="background-image: url(resources/images/logo/logo.jpg);"></div>
-                    <p>Unimóveis Pernambuco</p>
+                    <p>Imobille WebApp</p>
                 </div>
                 <div class="cover" style="background-image: url(resources/images/cover/cover.png);"></div>
-                <div class="menus">
-                    <p id="resumo" class="menu-active"><i class="fa fa-file-text" aria-hidden="true"></i> Resumo</p>
-                    <p id="sobre"><i class="fa fa-commenting" aria-hidden="true"></i> Sobre</p>
-                    <p id="fotos"><i class="fa fa-camera" aria-hidden="true"></i> Fotos</p>
-                    <p id="videos"><i class="fa fa-video-camera" aria-hidden="true"></i> Vídeos</p>
-                </div>
                 <div class="content-render">
-                    <div class="resumo">
-                        
-                    </div>
-                    <div class="sobre">
-                        
-                    </div>
-                    <div class="fotos">
-                        <p>Fotos:</p>
-                    </div>
-                    <div class="videos">
-                        <p>Videos:</p>
-                    </div>
+                    <div id="#lancamentos" class="box"></div>
+                    <div id="#usados" class="box"></div>
+                    <div id="#aluguel" class="box"></div>
                 </div>
             </div>
         </div>

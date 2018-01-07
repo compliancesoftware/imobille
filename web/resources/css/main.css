@@ -12,8 +12,7 @@
 }
 
 body {
-    background-color: #140101;
-    color: white;
+    color: #9d0a0e;
     font-family: 'Roboto';
     margin: 0 0 0 0 !important;
 }
@@ -66,15 +65,18 @@ small {
     padding-left: 0.5rem;
     padding-bottom: 0.5rem;
     cursor: pointer;
-    border-left: gray solid 0.2rem;
-    min-width: 12.5rem;
+    border-left: gray solid 0.5rem;
+    min-width: 15rem;
+    color: white;
+    border-top: dimgray solid 0.1rem;
 }
 
-.nav-item:hover {
+.nav-item:hover, .nav-item-active {
     font-family: 'Roboto-Bold';
-    color: #b81762;
+    color: #9d0a0e;
     background-color: black;
-    border-left: #b81762 solid 0.2rem;
+    border-left: #9d0a0e solid 0.5rem;
+    border-top: #9d0a0e solid 0.1rem;
 }
 
 .nav-item p {
@@ -83,24 +85,24 @@ small {
     margin: 0 0 0 0;
     padding-top: 0.2rem;
     color: white !important;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 .nav-item i {
-    margin-right: 1.3rem;
-    font-size: 1.2rem;
+    margin-right: 2rem;
+    font-size: 1.6rem;
     width: 1rem;
-    margin-top: 0.3rem;
+    margin-top: 0.2rem;
 }
 
 .contatos {
     display: none;
-    padding-top: 1rem;
-    font-size: 1.5rem;
+    padding-top: 0.5rem;
+    font-size: 2rem;
     padding-left: 0.3rem;
-    border-left: gray solid 0.2rem;
-    height: 2rem;
-    background-color: #2b1f1f;
+    border-left: #9a0a0e solid 0.5rem;
+    height: 2.7rem;
+    background-color: #00000077;
 }
 
 .facebook {
@@ -121,40 +123,34 @@ small {
 
 .envelope {
     color: cornsilk;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
 }
 
 .blogger {
     background-image: url(../images/contacts/blogger.png);
-    width: 1.2rem;
-    height: 1.5rem;
+    width: 1.8rem;
+    height: 1.9rem;
     background-position: center;
-    padding-top: 0.2rem;
-    background-size: contain;
-    background-repeat: no-repeat;
-    cursor: pointer;
-}
-
-.sexlog {
-    background-image: url(../images/contacts/sexlog.png);
-    width: 1.2rem;
-    height: 1.5rem;
-    background-position: center;
-    padding-top: 0.2rem;
+    padding-top: 0.3rem;
     background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer;
 }
 
 .contatos a, .contatos div {
-    margin-left: 0.2rem;
-    margin-right: 0.3rem;
-    float: left;
+    margin-right: 0.6rem;
+    float: right;
 }
 
 .contatos a:hover, .contatos div:hover {
     border-top: dimgray solid 0.02rem;
     border-bottom: dimgray solid 0.02rem;
+}
+
+#link-sobre {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 1.9rem;
 }
 
 .nav-footer {
@@ -173,8 +169,8 @@ small {
 
 .nav-footer p {
     margin: 0 0 0 0;
-    margin-right: 0.3rem;
-    margin-left: 0.55rem;
+    margin-right: 0.5rem;
+    margin-left: 1.7rem;
     color: dimgray;
 }
 
@@ -185,12 +181,9 @@ small {
 
 .navbar-toggle-btn {
     margin-top: 0.3rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-align: right;
     cursor: pointer;
-}
-
-#navbar-toggle-btn {
     position: fixed;
     width: 100%;
     z-index: 100;
@@ -200,6 +193,11 @@ small {
     margin: 0 0 0 0;
     padding-left: 0.5rem;
     padding-top: 0.3rem;
+}
+
+.login-btn {
+    float: right;
+    margin-right: 1rem;
 }
 
 .content {
@@ -213,7 +211,7 @@ small {
     width: -webkit-fill-available;
     min-height: 11rem;
     text-align: center;
-    padding-top: 2rem;
+    padding-top: 3rem;
 }
 
 .header-img {
@@ -231,7 +229,7 @@ small {
 
 .header p{
     margin: 0 0 0 0;
-    color: white;
+    color: #9d0a0e;
     font-size: 1.2rem;
     font-family: 'Roboto-Bold';
     text-transform: uppercase;
@@ -242,40 +240,12 @@ small {
     top: 0rem !important;
     left: 0rem !important;
     width: -webkit-fill-available;
-    height: 13rem;
+    height: 15rem;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     filter: blur(10px);
     z-index: -1;
-}
-
-.menus {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: white;
-    color: dimgray;
-    width: 100%;
-    text-align: center;
-}
-
-.menus p {
-    width: 24.7%;
-    cursor: pointer;
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    border-left: dimgray solid 0.05rem;
-}
-
-.menus p:hover {
-    color: #b81762;
-}
-
-.menu-active {
-    border-top: #b81762 solid 0.25rem;
-    color: #b81762;
 }
 
 .pelicula {
@@ -296,195 +266,25 @@ small {
     overflow: visible;
 }
 
-.resumo {
-    display: block;
-}
-
-.resumo-item {
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    background-color: #D36F9D;
-    box-shadow: 0 0 0 5px rgba(255,255,255,0.1), inset 0 1px 2px 0 rgba(0,0,0,0.3);
-    border-radius: 0.5rem;
-    padding: 1rem;
-    color: cornsilk;
-    cursor: pointer;
-}
-
-.resumo-titulo {
-    font-size: 120%;
-}
-
-.resumo-icone {
-    display: block;
+.box {
     margin: auto;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    width: 5rem;
-    height: 5rem;
-    color: white;
-    fill: white;
-    font-size: 5rem;
+    background-color: #fafafa;
+    min-height: 8rem;
+    width: auto;
+    margin-top: 3vh;
+    border-radius: 0.2rem;
+    box-shadow: 1px 1px 5px 0 #757575;
 }
 
-.resumo-link {
-    text-align: center;
-    cursor: pointer;
-}
-
-.resumo-data {
-    text-align: right;
-    margin-top: 1rem;
-    font-size: 0.8rem;
-}
-
-.sobre {
-    display: none;
-}
-
-.sobre-item {
-    background-color: #D36F9D;
-    color: white;
-    margin: 1rem 1rem 1rem 1rem;
-    padding: 0.3rem 0.3rem 0.3rem 0.3rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 0 0 5px rgba(255,255,255,0.1), inset 0 1px 2px 0 rgba(0,0,0,0.3);
-    overflow: auto;
-}
-
-.sobre-item p {
-    font-size: 1.4rem;
-    float: left;
-    background-color: #f884ba;
-    box-shadow: 0 0 0 5px rgba(255,255,255,0.1), inset 0 1px 2px 0 rgba(0,0,0,0.3);
-    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
-    border-radius: 0.3rem;
-}
-
-.fotos {
-    display: none;
-}
-
-.fotos-item {
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    background-color: #D36F9D;
-    box-shadow: 0 0 0 5px rgba(255,255,255,0.1), inset 0 1px 2px 0 rgba(0,0,0,0.3);
-    border-radius: 0.5rem;
-    padding: 1rem;
-    color: cornsilk;
-    cursor: pointer;
-}
-
-.fotos-item .imagem {
-    height: 50vh;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-bottom: 1rem;
-}
-
-.fotos-item .legenda {
-    margin-bottom: 0.5rem;
-    padding-bottom: 0.5rem;
-    text-align: left;
-    margin-left: 1rem;
-}
-
-.fotos-item .comentarios-titulo {
-    margin-bottom: 0.6rem;
-    padding-top: 0.5rem;
-    text-align: left;
-    margin-left: 0.5rem;
-    border-top: dimgray dotted 0.13rem;
-}
-
-.fotos-item .comentarios-titulo i{
-    float: right;
-    cursor: pointer;
-}
-
-.comentarios {
-    display: none;
-    padding-left: 0.6rem;
-    padding-right: 0.6rem;
-}
-
-.comentario-item {
-    box-shadow: 0 0 0 2px rgba(255,255,255,0.1), inset 0 1px 2px 0 rgba(0,0,0,0.3);
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.comentario-item .comentario {
-    margin-left: 0.5rem;
-    margin-bottom: 0.5rem;
-    background-color: #b679a9;
-    border-radius: 0.5rem;
-    padding: 0.3rem;
-}
-
-.respostas-container {
-    display: none;
-    box-shadow: 0 0 0 2px rgba(255,255,255,0.1), inset 0 1px 2px 0 rgba(0,0,0,0.3);
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-    margin-left: 0.5rem;
-    background-color: #b679a9;
-}
-
-.comentario-item .respostas-titulo {
-    text-align: right;
-}
-
-.comentario-item .respostas-titulo i{
-    margin-right: 0.5rem;
-    margin-bottom: 0.3rem;
-    margin-left: 0.2rem;
-}
-
-.videos {
-    display: none;
-}
-
-.videos-item {
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    background-color: #D36F9D;
-    box-shadow: 0 0 0 5px rgba(255,255,255,0.1), inset 0 1px 2px 0 rgba(0,0,0,0.3);
-    border-radius: 0.5rem;
-    padding: 1rem;
-    color: cornsilk;
-    cursor: pointer;
-}
-
-.videos-item video {
-    width: 100%;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-bottom: 1rem;
-}
-
-.videos-item .legenda {
-    margin-bottom: 0.5rem;
-    padding-bottom: 0.5rem;
-    text-align: left;
-    margin-left: 1rem;
-}
-
-@media screen and (min-width: 50rem) {
-    .resumo-item, .fotos-item, .sobre-item, .videos-item {
-        width: 50vw;
-        margin: auto;
-        margin-top: 1rem;
+@media screen and (max-width: 25rem) {
+    .box {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
     }
+}
 
+@media screen and (min-width: 25rem) {
+    .box {
+        max-width: 90%;
+    }
 }
