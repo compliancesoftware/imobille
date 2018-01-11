@@ -6,10 +6,10 @@
         private $email = null;
         private $telefone = null;
         private $foto = null;
-        private $criado_em = null;
-        private $atualizado_em = null;
-        private $ultimo_acesso = null;
-        private $permissao = null; //Pode ser 'Administrador','Gerente','Corretor','Marketing'
+        private $criadoEm = null;
+        private $atualizadoEm = null;
+        private $ultimoAcesso = null;
+        private $permissao = null; //Pode ser 'Administrador','Gerente','Corretor','Marketing','Cliente'
         
         public function setId($id) {
             $this->id = $id;
@@ -59,28 +59,28 @@
             return $this->foto;
         }
 
-        public function setCriadoEm($criado_em) {
-            $this->criado_em = $criado_em;
+        public function setCriadoEm($criadoEm) {
+            $this->criadoEm = $criadoEm;
         }
         
         public function getCriadoEm() {
-            return $this->criado_em;
+            return $this->criadoEm;
         }
 
-        public function setAtualizadoEm($atualizado_em) {
-            $this->atualizado_em = $atualizado_em;
+        public function setAtualizadoEm($atualizadoEm) {
+            $this->atualizadoEm = $atualizadoEm;
         }
         
         public function getAtualizadoEm() {
-            return $this->atualizado_em;
+            return $this->atualizadoEm;
         }
 
-        public function setUltimoAcesso($ultimo_acesso) {
-            $this->ultimo_acesso = $ultimo_acesso;
+        public function setUltimoAcesso($ultimoAcesso) {
+            $this->ultimoAcesso = $ultimoAcesso;
         }
         
         public function getUltimoAcesso() {
-            return $this->ultimo_acesso;
+            return $this->ultimoAcesso;
         }
 
         public function setPermissao($permissao) {

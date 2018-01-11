@@ -76,7 +76,7 @@
     $imovel->setBanheirosSociais(1);
     $imovel->setPosicaoDoSol('Nascente');// pode ser 'Nascente' ou 'Poente'
     $imovel->setAtualizadoEm(null);
-    $imovel->setPreco(330000.01);
+    $imovel->setPreco(330000.00);
     $imovel->setConstrucao($construcao);
     $imovel->setCaptadoPor(null);
     $imovel->setCriadoPor(null);
