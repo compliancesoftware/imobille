@@ -4,6 +4,10 @@
     class ClassLoader {
         public static function load() {
             require '../../../back/br.com.imobille.models/Perfil.php';
+            require '../../../back/br.com.imobille.models/Endereco.php';
+            require '../../../back/br.com.imobille.models/Construtora.php';
+            require '../../../back/br.com.imobille.models/Construcao.php';
+            require '../../../back/br.com.imobille.models/Imovel.php';
         
             require '../../../back/br.com.imobille.dao.utils/Jsonify.php';
             require '../../../back/br.com.imobille.dao.utils/ResponseMessage.php';

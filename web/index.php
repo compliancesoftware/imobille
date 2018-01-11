@@ -83,16 +83,26 @@
                 </div>
             </div>
             <div class="content">
-                <div class="pelicula"></div>
+                <div class="pelicula" onclick="toggleNavBar();"></div>
+                <div class="loading">
+                    <i class="fa fa-spin fa-circle-o-notch" aria-hidden="true"></i>
+                </div>
                 <div class="header">
                     <div class="header-img" style="background-image: url(resources/images/logo/logo.jpg);"></div>
                     <p>Imobille WebApp</p>
                 </div>
                 <div class="cover" style="background-image: url(resources/images/cover/cover.png);"></div>
                 <div class="content-render">
-                    <div id="#lancamentos" class="box"></div>
-                    <div id="#usados" class="box"></div>
-                    <div id="#aluguel" class="box"></div>
+                    <p class="box-title">Lançamentos</p>
+                    <div id="lancamentos" class="box"></div>
+                    <p class="box-title">Usados</p>
+                    <div id="usados" class="box">
+                        
+                    </div>
+                    <p class="box-title">Aluguel</p>
+                    <div id="aluguel" class="box">
+                        
+                    </div>
                 </div>
             </div>
         </div>
