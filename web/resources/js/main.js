@@ -31,7 +31,7 @@ function changePage(page) {
 
 function moveToLocation(location) {
     if(canMove) {
-        var height = $(location).offset().top;
+        var height = $(location).offset().top - 40;
         $('html, body').animate({scrollTop: height}, 1200);
     }
 }
