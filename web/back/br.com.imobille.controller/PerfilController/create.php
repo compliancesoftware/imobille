@@ -16,14 +16,5 @@
     $perfil->setFoto($foto);
     $perfil->setPermissao($_POST['permissao']);
 
-    $logado = unserialize($_SESSION['logado']);
-    if($logado != null && $logado != '') {
-        echo $service->createPerfil($perfil);
-    }
-    else {
-        $mensagem = new ResponseMessage();
-        $mensagem->setMessage('Login ou senha incorretos.');
-        $_SESSION['logado'] = '';
-    }
-    
+    echo $service->createPerfil($perfil);
 ?>

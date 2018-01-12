@@ -118,6 +118,11 @@
     margin-top: 0.1rem;
 }
 
+.to-left {
+    float: left;
+    margin-left: 1.5rem;
+}
+
 @media screen and (min-width: 35rem){
     .box-item {
         float: left;

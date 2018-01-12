@@ -5,7 +5,8 @@
 
     ClassLoader::load();
     
-    $_SESSION['logado'] = '';
+    session_unset($_SESSION['logado']);
+    session_destroy();
 
     $mensagem = new ResponseMessage();
     $mensagem->setMessage('Você saiu.');

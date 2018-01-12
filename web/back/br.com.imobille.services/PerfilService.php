@@ -6,8 +6,19 @@
             $this->perfilDao = new PerfilDao();
         }
 
-        public function createPerfil($perfil) {
-            $response = $this->perfilDao->createPerfil($perfil);
+        public function createPerfil($perfil, $logado) {
+            $logado = null;
+            $response = null;
+            
+            if(isset($_SESSION['logado']) && $_SESSION['logado'] != '') {
+                $logado = unserialize($_SESSION['logado']);
+                $response = $this->perfilDao->createPerfil($perfil);
+            }
+            else {
+                $response = new ResponseMessage();
+                $response->setMessage('Login ou senha inválidos.');
+            }
+            
             return $response->serialize();
         }
 
