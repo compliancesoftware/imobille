@@ -1,5 +1,5 @@
 <?php
-    require('../../../classloader.php');
+    require('../../classloader.php');
     
     header('Content-type: application/json; charset=UTF-8');
 

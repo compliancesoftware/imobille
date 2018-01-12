@@ -65,36 +65,6 @@ function fillLancamentos() {
     },dataType);
 }
 
-function  clickLancamentos(item) {
-    activeNavItem(item);
-    toggleNavBar();
-    moveToLocation('#lancamentos');
-    changePage('#lancamentos');
-}
-
-function  clickUsados(item) {
-    activeNavItem(item);
-    toggleNavBar();
-    moveToLocation('#usados');
-    changePage('#usados');
-}
-
-function  clickAluguel(item) {
-    activeNavItem(item);
-    toggleNavBar();
-    moveToLocation('#aluguel');
-    changePage('#aluguel');
-}
-
-function  clickContato() {
-    if($('.contatos').css('display') == 'none') {
-        $('.contatos').slideDown();
-    }
-    else {
-        $('.contatos').slideUp();
-    }
-}
-
 window.onpageshow = function() {
     setTimeout(function() {
         applySlicker();

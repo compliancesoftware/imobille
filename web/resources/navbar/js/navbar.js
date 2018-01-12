@@ -1,9 +1,12 @@
 function togglePelicula() {
-    if($('.pelicula').css('display') == 'none') {
+    if($('.pelicula').css('display') == undefined) {
+        var pelicula = '<div class="pelicula" onclick="toggleNavBar();"></div>';
+        $('body').append(pelicula);
         $('.pelicula').fadeIn();
     }
     else {
         $('.pelicula').fadeOut();
+        $('.pelicula').remove();
     }
 }
 
@@ -84,6 +87,36 @@ function fillContatos() {
     contatos.push(contato6);
 
     appendToContatos(contatos);
+}
+
+function  clickLancamentos(item) {
+    activeNavItem(item);
+    toggleNavBar();
+    moveToLocation('#lancamentos');
+    changePage('#lancamentos');
+}
+
+function  clickUsados(item) {
+    activeNavItem(item);
+    toggleNavBar();
+    moveToLocation('#usados');
+    changePage('#usados');
+}
+
+function  clickAluguel(item) {
+    activeNavItem(item);
+    toggleNavBar();
+    moveToLocation('#aluguel');
+    changePage('#aluguel');
+}
+
+function  clickContato() {
+    if($('.contatos').css('display') == 'none') {
+        $('.contatos').slideDown();
+    }
+    else {
+        $('.contatos').slideUp();
+    }
 }
 
 $('document').ready(function(){

@@ -1,5 +1,7 @@
-            <script type='text/javascript' src='resources/js/models/contato.js'></script>
-            <script type='text/javascript' src='resources/js/navbar.js'></script>
+            <script type='text/javascript' src='../resources/main/js/models/contato.js'></script>
+            <script type='text/javascript' src='../resources/navbar/js/navbar.js'></script>
+
+            <link rel='stylesheet' href='../resources/navbar/css/navbar.css' />
             
             <div class="navbar-toggle-btn">
                 <i class="fa fa-navicon" aria-hidden="true" onclick="toggleNavBar();"></i>

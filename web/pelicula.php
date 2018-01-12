@@ -1,1 +1,0 @@
-                <div class="pelicula" onclick="toggleNavBar();"></div>

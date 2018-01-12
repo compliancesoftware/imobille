@@ -28,9 +28,15 @@ function activeNavItem(item) {
 }
 
 function showLoading() {
+    var loading = '';
+    loading += '<div class="loading">';
+    loading += '    <i class="fa fa-spin fa-circle-o-notch" aria-hidden="true"></i>';
+    loading += '</div>';
+    $('body').append(loading);
     $(".loading").show();
 }
 
 function hideLoading() {
     $(".loading").hide();
+    $('.loading').remove();
 }
