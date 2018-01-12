@@ -1,3 +1,18 @@
+.box-login {
+    width: -webkit-fill-available;
+    max-width: 25rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    position: fixed;
+    top: 30%;
+    left: 0;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: lightgray;
+    z-index: 10;
+}
+
 .box-login input {
     text-align: left;
     height: 1.3rem;
@@ -20,7 +35,8 @@
     margin-top: 0.5rem;
 }
 
-.btn-login:hover {
-    box-shadow: 0 1px 1px black;
-    background: linear-gradient(#660205,#9a0a0e);
+@media screen and (min-width: 450px){
+    .box-login {
+        margin-left: calc(50% - 14rem);
+    }
 }

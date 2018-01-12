@@ -31,3 +31,6 @@
 
         <link rel='stylesheet' type='text/css' href='../resources/main/css/main.css'/>
         <script type='text/javascript' src='../resources/main/js/main.js'></script>
+
+        <link rel='stylesheet' type='text/css' href='../resources/main/messaging/messaging.css'/>
+        <script type='text/javascript' src='../resources/main/messaging/messaging.js'></script>

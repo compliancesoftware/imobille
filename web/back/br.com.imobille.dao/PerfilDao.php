@@ -32,6 +32,10 @@
             if($perfil != false && get_class($perfil) != 'ResponseMessage') {
                 if($perfil != null && $perfil->getSenha() == $password) {
                     $perfil->setSenha('<secret>');
+                    $dateTime = new DateTime();
+                    $now = $dateTime->format('Y-m-d H:i:s');
+                    $perfil->setUltimoAcesso($now);
+                    $this->updatePerfil($perfil);
                 }
                 else {
                     $perfil = null;

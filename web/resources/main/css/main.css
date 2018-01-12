@@ -48,7 +48,7 @@ small {
     opacity: 0.5;
 }
 
-.pelicula, .loading{
+.pelicula, .loading {
     display: none;
     position: fixed;
     top: 0;
@@ -107,18 +107,4 @@ small {
 
 .slick-prev:focus, .slick-next:focus {
     color: #9a0a0e !important;
-}
-
-.box-login {
-    width: -webkit-fill-available;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    position: fixed;
-    top: 30%;
-    left: 0;
-    margin: 0.5rem;
-    border-radius: 0.5rem;
-    background-color: lightgray;
-    z-index: 10;
 }

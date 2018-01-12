@@ -11,9 +11,9 @@
             <?php require '../commons/navbar.php';?>
             <div class="content">
                 <div class="box-login">
-                    <input type="text" name="login" placeholder="login">
-                    <input type="password" name="login" placeholder="senha">
-                    <a href="javascript:void(0);" class="btn-login">Login</a>
+                    <input type="text" id="login" placeholder="login">
+                    <input type="password" id="password" placeholder="senha">
+                    <a href="javascript:void(0);" onclick="login();" class="btn-login">Login</a>
                 </div>
             </div>
         </div>
