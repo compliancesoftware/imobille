@@ -12,7 +12,7 @@
                     $statement->bindParam(':nome',$nomeOuEmail);
                     $statement->bindParam(':email',$nomeOuEmail);
                     $statement->execute();
-                    $statement->setFetchMode(PDO::FETCH_CLASS, $class);
+                    $statement->setFetchMode(PDO::FETCH_CLASS, 'Perfil');
                     $found = $statement->fetch();
                     return $found;
                 }
@@ -29,7 +29,7 @@
 
         public function authenticate($login, $password) {
             $perfil = $this->getByNomeOuEmail($login);
-            if(get_class($perfil) != 'ResponseMessage') {
+            if($perfil != false && get_class($perfil) != 'ResponseMessage') {
                 if($perfil != null && $perfil->getSenha() == $password) {
                     $perfil->setSenha('<secret>');
                 }

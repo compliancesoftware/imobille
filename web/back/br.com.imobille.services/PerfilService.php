@@ -25,13 +25,15 @@
             $authenticated = $this->perfilDao->authenticate($login, $senha);
             $message = new ResponseMessage();
 
-            if($authenticated != null && get_class($authenticated) != 'ResponseMessage') {
-                $_SESSION['logado'] = $authenticated->serialize();
-                $message->setMessage('Olá, '.$authenticated->getNome().'!');
-                $message->setStatus(ResponseMessage::STATUS_OK);
-            }
-            else if($authenticated != null){
-                $message = $authenticated;
+            if($authenticated != null){
+                if(get_class($authenticated) != 'ResponseMessage') {
+                    $_SESSION['logado'] = serialize($authenticated);
+                    $message->setMessage('Olá, '.$authenticated->getNome().'!');
+                    $message->setStatus(ResponseMessage::STATUS_OK);
+                }
+                else{
+                    $message = $authenticated;
+                }
             }
             else {
                 $message->setMessage('Login ou senha incorretos.');

@@ -84,7 +84,17 @@
             $str = preg_replace_callback('/\\\\u([0-9a-fA-F]{4})/', function ($match) {
                 return mb_convert_encoding(pack('H*', $match[1]), 'UTF-8', 'UCS-2BE');
 			}, $str);
-			$str = str_replace('"endereco":{}','"endereco":'.$this->endereco->serialize(),$str);
+
+			if($this->endereco != null) {
+				$str = str_replace('"endereco":{}','"endereco":'.$this->endereco->serialize(),$str);
+			}
+			if($this->criadoPor != null) {
+				$str = str_replace('"criadoPor":{}','"criadoPor":'.$this->criadoPor->serialize(),$str);
+			}
+			if($this->atualizadoPor != null) {
+				$str = str_replace('"atualizadoPor":{}','"atualizadoPor":'.$this->atualizadoPor->serialize(),$str);
+			}
+			
             return $str;
         }
 

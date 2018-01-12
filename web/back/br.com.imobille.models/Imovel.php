@@ -204,7 +204,15 @@
                 return mb_convert_encoding(pack('H*', $match[1]), 'UTF-8', 'UCS-2BE');
 			}, $str);
 			
-			$str = str_replace('"construcao":{}','"construcao":'.$this->construcao->serialize(),$str);
+			if($this->construcao != null) {
+				$str = str_replace('"construcao":{}','"construcao":'.$this->construcao->serialize(),$str);
+			}
+			if($this->criadoPor != null) {
+				$str = str_replace('"criadoPor":{}','"criadoPor":'.$this->criadoPor->serialize(),$str);
+			}
+			if($this->atualizadoPor != null) {
+				$str = str_replace('"atualizadoPor":{}','"atualizadoPor":'.$this->atualizadoPor->serialize(),$str);
+			}
 
             return $str;
         }

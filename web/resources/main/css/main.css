@@ -82,20 +82,19 @@ small {
     bottom: -0.3rem !important;
 }
 
+.slick-arrow {
+    margin-top: -3rem !important;
+    z-index: 10 !important;
+    font-size: 3rem !important;
+    color: #9a0a0e !important;
+}
+
 .slick-prev {
     left: 1rem !important;
-    margin-top: -3rem;
-    z-index: 10;
-    font-size: 3rem;
-    color: #9a0a0e;
 }
 
 .slick-next {
     right: 2rem !important;
-    margin-top: -3rem;
-    z-index: 10;
-    font-size: 3rem;
-    color: #9a0a0e;
 }
 
 .slick-arrow::before {
