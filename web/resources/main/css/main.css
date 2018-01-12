@@ -48,11 +48,6 @@ small {
     opacity: 0.5;
 }
 
-.login-btn {
-    float: right;
-    margin-right: 1rem;
-}
-
 .pelicula, .loading{
     display: none;
     position: fixed;
@@ -80,19 +75,6 @@ small {
     width: -webkit-fill-available;
     display: flex;
     flex-wrap: wrap;
-}
-
-.content-render {
-    width: -webkit-fill-available;
-    height: 100%;
-    overflow: visible;
-    background-color: lightgrey;
-    padding-top: 1rem;
-}
-
-.to-left {
-    float: left;
-    margin-left: 0.5rem;
 }
 
 .slick-dots {

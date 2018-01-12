@@ -1,3 +1,7 @@
+.login-btn {
+    float: right;
+    margin-right: 1rem;
+}
 
 .navbar {
     display: none;

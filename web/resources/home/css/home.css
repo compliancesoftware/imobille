@@ -40,6 +40,14 @@
     z-index: -1;
 }
 
+.content-render {
+    width: -webkit-fill-available;
+    height: 100%;
+    overflow: visible;
+    background-color: lightgrey;
+    padding-top: 1rem;
+}
+
 .box {
     background-color: #fafafa;
     overflow: hidden;
