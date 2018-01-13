@@ -52,6 +52,20 @@
             
             return $message->serialize();
         }
+
+        public function search($nameOrEmail) {
+            $found = $this->perfilDao->search($nameOrEmail);
+            
+            if($found != null){
+                return $found->serialize();
+            }
+            else {
+                $message = new ResponseMessage();
+                $message->setMessage('Usuário não encontrado.');
+                return $message->serialize();
+            }
+        }
+
     }
     
 ?>

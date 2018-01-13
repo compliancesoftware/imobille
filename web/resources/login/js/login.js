@@ -24,6 +24,50 @@ function login() {
 }
 
 var name = '';
+var search = null;
+
+function procuraUsuario() {
+    if(search != null) {
+        clearTimeout(search);
+    }
+    search = setTimeout(function() {
+        var url = window.location.protocol + '//' + window.location.host+'/back/br.com.imobille.controller/PerfilController/search.php';
+        var data = {
+            nome: name
+        };
+        var dataType = 'json';
+        $.get(url,data,function(response) {
+            if(response != null) {
+                if(response.foto != null && response.foto != '') {
+                    var foto = 'data:image/png;base64,' + response.foto;
+                    $('.user-img').css('background-image','url(' + foto + ')');
+                }
+                else {
+                    $('.user-img').css('background-image','url(../resources/main/images/users/nouser.jpg)');
+                }
+            }
+            else {
+                $('.user-img').css('background-image','url(../resources/main/images/users/nouser.jpg)');
+            }
+        },dataType).fail(function() {
+            $('.user-img').css('background-image','url(../resources/main/images/users/nouser.jpg)');
+        });
+    }, 700);
+}
+
+function logout() {
+    var url = window.location.protocol + '//' + window.location.host+'/back/br.com.imobille.controller/PerfilController/logout.php';
+    var data = {};
+    var dataType = 'json';
+    $.get(url,data,function(response) {
+        if(response.status == 'Ok') {
+            changePage('/login');
+        }
+        else {
+            changePage('/admin');
+        }
+    },dataType);
+}
 
 $('document').ready(function() {
     $('#login').keyup(function(event) {
@@ -31,9 +75,8 @@ $('document').ready(function() {
             $('#password').focus();
         }
         else {
-            name += event.key;
-            showLoading();
-            //Search user by name and hideLoading();
+            name = $('#login').val();
+            procuraUsuario();
         }
     });
 

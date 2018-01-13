@@ -27,6 +27,13 @@
             }
         }
 
+        public function search($nomeOuEmail) {
+            $perfil = $this->getByNomeOuEmail($nomeOuEmail);
+            $perfil->setSenha('<secret>');
+
+            return $perfil;
+        }
+
         public function authenticate($login, $password) {
             $perfil = $this->getByNomeOuEmail($login);
             if($perfil != false && get_class($perfil) != 'ResponseMessage') {
