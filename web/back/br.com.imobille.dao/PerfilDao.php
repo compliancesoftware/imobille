@@ -31,7 +31,6 @@
             $perfil = $this->getByNomeOuEmail($login);
             if($perfil != false && get_class($perfil) != 'ResponseMessage') {
                 if($perfil != null && $perfil->getSenha() == $password) {
-                    $perfil->setSenha('<secret>');
                     $dateTime = new DateTime();
                     $now = $dateTime->format('Y-m-d H:i:s');
                     $perfil->setUltimoAcesso($now);

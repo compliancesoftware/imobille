@@ -11,8 +11,8 @@
     $password = $_POST['senha'];
 
     $password = base64_decode($password);
-
+    
     $response = $service->authenticate($login, $password);
-
+    
     echo $response;
 ?>

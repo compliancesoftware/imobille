@@ -23,10 +23,17 @@ function login() {
     },dataType);
 }
 
+var name = '';
+
 $('document').ready(function() {
     $('#login').keyup(function(event) {
         if(event.key == 'Enter') {
             $('#password').focus();
+        }
+        else {
+            name += event.key;
+            showLoading();
+            //Search user by name and hideLoading();
         }
     });
 

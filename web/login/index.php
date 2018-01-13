@@ -10,6 +10,9 @@
         <div class="page">
             <?php require '../commons/navbar.php';?>
             <div class="content">
+                <div class="user">
+                    <div class="user-img" style="background-image: url(../resources/main/images/users/nouser.jpg);"></div>
+                </div>
                 <div class="box-login">
                     <input type="text" id="login" placeholder="login">
                     <input type="password" id="password" placeholder="senha">
