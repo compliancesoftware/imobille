@@ -6,7 +6,7 @@
             $this->perfilDao = new PerfilDao();
         }
 
-        public function createPerfil($perfil, $logado) {
+        public function createPerfil($perfil) {
             $logado = null;
             $response = null;
             

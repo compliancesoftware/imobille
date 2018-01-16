@@ -7,6 +7,13 @@
         <script type='text/javascript' src='../resources/login/js/login.js'></script>
     </head>
     <body>
+        <?php
+            session_start();
+
+            if(isset($_SESSION['logado']) && $_SESSION['logado'] != '') {
+                echo '<script>changePage("/admin");</script>';
+            }
+        ?>
         <div class="page">
             <?php require '../commons/navbar.php';?>
             <div class="content">

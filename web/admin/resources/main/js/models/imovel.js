@@ -1,0 +1,30 @@
+function Imovel() {
+    this.id = 0;
+    this.disponivel = false;
+    this.progresso = null;
+    this.quartosComSuite = 0;
+    this.quartosSemSuite = 0;
+    this.tipo = 'Apartamento'; // pode ser 'Casa', 'Apartamento', 'Galpão', 'Armazém', 'Ponto Comercial'
+    this.modelo = 'Novo';// pode ser 'Novo', 'Usado', 'Aluguel'
+    this.captadoEm = '';
+    this.criadoEm = '';
+    this.descricao = '';
+    this.salasDeJantar = 0;
+    this.andares = 0;
+    this.categoriaDeAndares = '';// pode ser 'Normal','Duplex' ou 'Trilex'
+    this.temVaranda = false;
+    this.temHomeOffice = false;
+    this.area = 0.00;
+    this.areaUtil = 0.00;
+    this.salasDeEstar = 0;
+    this.numero = '';
+    this.vagasDeEstacionamento = 0;
+    this.banheirosSociais = 0;
+    this.posicaoDoSol = '';// pode ser 'Nascente' ou 'Poente'
+    this.atualizadoEm = '';
+    this.preco = 0.00;
+    this.construcao = null;
+    this.captadoPor = null;
+    this.criadoPor = null;
+    this.atualizadoPor = null;
+}

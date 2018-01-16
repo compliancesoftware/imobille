@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url('fonts/Roboto-Medium.ttf')  format('truetype');
+}
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('fonts/Roboto-Bold.ttf')  format('truetype');
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Regular.ttf')  format('truetype');
+}
+
+body {
+    color: #9d0a0e;
+    font-family: 'Roboto';
+    margin: 0 0 0 0 !important;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: dimgray;
+}
+
+p {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+* {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.page {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+small {
+    font-size: 0.6rem;
+    opacity: 0.5;
+}
+
+.pelicula, .loading {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 50;
+}
+
+.loading {
+    z-index: 5000 !important;
+    margin: auto;
+    text-align: center;
+    padding-top: 1.7rem;
+}
+
+.loading i{
+    font-size: 10rem;
+}
+
+.content {
+    width: -webkit-fill-available;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.slick-dots {
+    position: relative !important;
+    bottom: -0.3rem !important;
+}
+
+.slick-arrow {
+    margin-top: -3rem !important;
+    z-index: 10 !important;
+    font-size: 3rem !important;
+    color: #9a0a0e !important;
+}
+
+.slick-prev {
+    left: 1rem !important;
+}
+
+.slick-next {
+    right: 2rem !important;
+}
+
+.slick-arrow::before {
+    content: '' !important;
+}
+
+.slick-prev:hover, .slick-next:hover  {
+    color: white !important;
+}
+
+.slick-prev:focus, .slick-next:focus {
+    color: #9a0a0e !important;
+}
