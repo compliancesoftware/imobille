@@ -7,6 +7,8 @@
     flex-direction: row;
     height: 4rem;
     border-top: gray solid 0.01rem;
+    background-color: white;
+    z-index: 100;
 }
 
 .nav-item {
@@ -18,7 +20,7 @@
     text-shadow: 5px 3px 5px darkgray;
 }
 
-.fa-building-o {
+.nav-item .fa-building-o {
     font-size: 1.9rem !important;
     margin-bottom: 0.1rem;
 }
@@ -33,4 +35,41 @@
 
 .nav-item p {
     font-size: 0.8rem;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 4.5rem;
+    margin-right: 0.5rem;
+    border: #9d0a0e solid 0.5rem;
+    border-bottom-right-radius: 0rem !important;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: dimgray;
+    background-color: white;
+    box-shadow: 2px 2px 20px black;
+    z-index: 100;
+}
+
+.popup-content p {
+    font-size: 1.2rem;
+    padding: 0.2rem;
+}
+
+.popup-content p:hover {
+    cursor: pointer;
+    color: #9d0a0e;
+}
+
+.popup-content p i {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+
+.popup-content-separator {
+    width: 100%;
+    border-bottom: darkgray solid 0.1rem;
 }

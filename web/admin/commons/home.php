@@ -10,9 +10,7 @@
         <div class="page">
             <?php require 'navbar.php';?>
             <div class="content">
-
                 
-
             </div>
         </div>
     </body>
