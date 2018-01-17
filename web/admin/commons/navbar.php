@@ -1,44 +1,26 @@
-            <script type='text/javascript' src='../admin/resources/main/js/models/contato.js'></script>
             <script type='text/javascript' src='../admin/resources/navbar/js/navbar.js'></script>
 
             <link rel='stylesheet' href='../admin/resources/navbar/css/navbar.css' />
             
-            <div class="navbar-toggle-btn">
-                <i class="fa fa-navicon" aria-hidden="true" onclick="toggleNavBar();"></i>
-                <i class="fa fa-user-circle login-btn" aria-hidden="true" onclick="changePage('/login');"></i>
-            </div>
             <div class="navbar">
-                <div class="nav-item" id="link-home" onclick="changePage('');">
+                <div class="nav-item home" onclick="active(this)">
                     <i class="fa fa-home" aria-hidden="true"></i>
                     <p>Home</p>
                 </div>
-                <div class="nav-item" id="link-lancamentos" onclick="clickLancamentos(this);">
-                    <i class="fa fa-building-o" aria-hidden="true"></i>
-                    <p>Lançamentos</p>
+                <div class="nav-item imoveis" onclick="active(this);">
+                    <i class="fa fa-building-o"></i>
+                    <p>Imóveis</p>
                 </div>
-                <div class="nav-item" id="link-usados" onclick="clickUsados(this);">
-                    <i class="fa fa-handshake-o" aria-hidden="true"></i>
-                    <p>Usados</p>
+                <div class="nav-item clientes" onclick="active(this);">
+                    <i class="fa fa-users"></i>
+                    <p>Clientes</p>
                 </div>
-                <div class="nav-item" id="link-aluguel"  onclick="clickAluguel(this);">
-                    <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-                    <p>Aluguel</p>
+                <div class="nav-item contas" onclick="active(this);">
+                    <i class="fa fa-credit-card"></i>
+                    <p>Contas</p>
                 </div>
-                <div class="nav-item" id="link-cadastro" onclick="changePage('/cadastro');">
-                    <i class="fa fa-bell-o" aria-hidden="true"></i>
-                    <p>Cadastre-se</p>
-                </div>
-                <div class="nav-item" id="link-contato" onclick="clickContato();">
-                    <i class="fa fa-phone" aria-hidden="true"></i>
-                    <p>Entre em contato</p>
-                </div>
-                <div class="contatos"></div>
-                <div class="nav-item" id="link-sobre" onclick="changePage('/sobre');">
-                    <i class="fa fa-question" aria-hidden="true"></i>
-                    <p>Sobre nós</p>
-                </div>
-                <div class="nav-footer">
-                    <p>by:</p>
-                    <a href="http://compliancehome.herokuapp.com/">Compliance Software&reg;</a>
+                <div class="nav-item outros" onclick="toggleOutros();">
+                    <i class="fa fa-ellipsis-v"></i>
+                    <p>Outros</p>
                 </div>
             </div>
