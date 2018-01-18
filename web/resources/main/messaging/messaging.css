@@ -2,8 +2,8 @@
     display: none;
     position: fixed;
     z-index: 6000;
-    height: -webkit-fill-available;
-    width: -webkit-fill-available;
+    height: 100%;
+    width: 100%;
     top: 0;
     left: 0;
 }
@@ -18,7 +18,7 @@
 }
 
 .modal-message-content {
-    width: -webkit-fill-available;
+    width: auto;
     max-width: 25rem;
     display: flex;
     flex-direction: column;
@@ -38,7 +38,7 @@
     color: white;
     background: linear-gradient(#9a0a0e,#660205);
     padding: 0.5rem;
-    width: -webkit-fill-available;
+    width: auto;
     border-radius: 0.5rem;
     box-shadow: 0 1px 10px black;
     margin-top: 0.5rem;

@@ -1,6 +1,6 @@
 .user {
     background-color: transparent;
-    width: -webkit-fill-available;
+    width: 100%;
     min-height: 11rem;
     text-align: center;
     padding-top: 3rem;
@@ -19,13 +19,13 @@
 }
 
 .box-login {
-    width: -webkit-fill-available;
+    width: calc(100% - 5rem);
     max-width: 25rem;
     display: flex;
     flex-direction: column;
     padding: 2rem;
     position: fixed;
-    top: 30%;
+    top: 35%;
     left: 0;
     margin: 0.5rem;
     border-radius: 0.5rem;
@@ -49,7 +49,7 @@
     color: white;
     background: linear-gradient(#9a0a0e,#660205);
     padding: 0.5rem;
-    width: -webkit-fill-available;
+    width: auto;
     border-radius: 0.5rem;
     box-shadow: 0 1px 10px black;
     margin-top: 0.5rem;

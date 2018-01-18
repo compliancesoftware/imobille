@@ -1,14 +1,15 @@
 .login-btn {
     float: right;
     margin-right: 1rem;
+    padding-top: 0.1rem;
 }
 
 .navbar {
     display: none;
     position: fixed;
-    z-index: 100;
+    z-index: 102;
     background-color: #1E1E1E;
-    height: -webkit-fill-available;
+    height: 100%;
     opacity: 0.9;
 }
 
@@ -36,7 +37,6 @@
 
 .nav-item p {
     padding: 0 0 0 0;
-   
     margin: 0 0 0 0;
     padding-top: 0.2rem;
     color: white !important;
@@ -103,7 +103,7 @@
 }
 
 #link-sobre {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     margin-bottom: 1.9rem;
 }

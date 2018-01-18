@@ -57,7 +57,7 @@ small {
     height: 100%;
     background-color: black;
     opacity: 0.5;
-    z-index: 50;
+    z-index: 101;
 }
 
 .loading {
@@ -72,7 +72,7 @@ small {
 }
 
 .content {
-    width: -webkit-fill-available;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -84,9 +84,11 @@ small {
 
 .slick-arrow {
     margin-top: -3rem !important;
-    z-index: 10 !important;
+    z-index: 70 !important;
     font-size: 3rem !important;
     color: #9a0a0e !important;
+    width: 3rem !important;
+    height: 3rem !important;
 }
 
 .slick-prev {
@@ -94,7 +96,7 @@ small {
 }
 
 .slick-next {
-    right: 2rem !important;
+    right: 1.2rem !important;
 }
 
 .slick-arrow::before {
