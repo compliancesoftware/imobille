@@ -71,8 +71,8 @@
     overflow-wrap: break-word;
 }
 
-@media screen and (min-width: 450px){
+@media screen and (min-width: 280px){
     .modal-message-content {
-        margin-left: calc(50% - 14rem);
+        margin-left: calc(50% - 8.3rem);
     }
 }
