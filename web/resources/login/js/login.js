@@ -12,15 +12,16 @@ function login() {
     };
     var dataType = 'json';
     $.post(url,data,function(response) {
-        hideLoading();
         if(response.status == 'Ok') {
-            Messaging.showMessage('login','Bem vindo',response.message);
             changePage('/admin');
         }
         else {
+            hideLoading();
             Messaging.showMessage('login','Erro',response.message);
         }
-    },dataType);
+    },dataType).fail(function() {
+        hideLoading();
+    });
 }
 
 var name = '';

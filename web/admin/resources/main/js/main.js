@@ -12,6 +12,7 @@ function isMobile() {
 }
 
 function changePage(page) {
+    showLoading();
     window.open(window.location.protocol + '//' + window.location.host + page,'_self');
 }
 
