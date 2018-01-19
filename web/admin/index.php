@@ -1,1 +1,3 @@
-<?php require 'commons/home.php';?>
+<script>
+    window.location.href = '/admin/home';
+</script>

@@ -93,21 +93,36 @@ function  clickLancamentos(item) {
     activeNavItem(item);
     toggleNavBar();
     moveToLocation('#lancamentos');
-    changePage('#lancamentos');
+    if(window.location.href.indexOf('/home') > -1) {
+        window.location.hash = 'lancamentos';
+    }
+    else {
+        changePage('/home/#lancamentos');
+    }
 }
 
 function  clickUsados(item) {
     activeNavItem(item);
     toggleNavBar();
     moveToLocation('#usados');
-    changePage('#usados');
+    if(window.location.href.indexOf('/home') > -1) {
+        window.location.hash = 'usados';
+    }
+    else {
+        changePage('/home/#usados');
+    }
 }
 
 function  clickAluguel(item) {
     activeNavItem(item);
     toggleNavBar();
     moveToLocation('#aluguel');
-    changePage('#aluguel');
+    if(window.location.href.indexOf('/home') > -1) {
+        window.location.hash = 'aluguel';
+    }
+    else {
+        changePage('/home/#aluguel');
+    }
 }
 
 function  clickContato() {

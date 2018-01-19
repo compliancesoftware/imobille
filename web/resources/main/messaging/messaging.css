@@ -18,8 +18,7 @@
 }
 
 .modal-message-content {
-    width: auto;
-    max-width: 25rem;
+    width: calc(100% - 1rem);
     display: flex;
     flex-direction: column;
     padding: 0rem;
@@ -59,6 +58,7 @@
 .modal-message-body {
     display: flex;
     flex-direction: column;
+    height: -moz-fit-content;
     height: fit-content;
     padding: 1rem;
 }
@@ -69,10 +69,5 @@
     font-family: 'Roboto-Bold';
     margin-bottom: 1rem;
     overflow-wrap: break-word;
-}
-
-@media screen and (min-width: 280px){
-    .modal-message-content {
-        margin-left: calc(50% - 8.3rem);
-    }
+    word-wrap: break-word;
 }

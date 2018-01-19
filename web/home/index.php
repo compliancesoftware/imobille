@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang='pt-BR'>
     <head>
-        <?php require 'header.php';?>
+        <?php require '../commons/header.php';?>
         <script src='../resources/home/js/home.js'></script>
         <link rel='stylesheet' href='../resources/home/css/home.css' />
         <title>Imobille Site</title>
 
-        <?php require 'slider.php';?>
+        <?php require '../commons/slider.php';?>
     </head>
     <body>
         <div class="page">
-            <?php require 'navbar.php';?>
+            <?php require '../commons/navbar.php';?>
             <div class="content">
-                <?php require 'cover.php';?>
+                <?php require '../commons/cover.php';?>
 
                 <div class="content-render">
                     <p class="box-title">Lançamentos</p>

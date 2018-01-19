@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang='pt-BR'>
     <head>
-        <?php require 'header.php';?>
-        <script src='../admin/resources/home/js/home.js'></script>
-        <link rel='stylesheet' href='../admin/resources/home/css/home.css' />
+        <?php require '../commons/header.php';?>
         <title>Imobille Site - Administrador</title>
     </head>
     <body>
         <div class="page">
-            <?php require 'navbar.php';?>
+            <?php require '../commons/navbar.php';?>
             <div class="content">
                 
             </div>
