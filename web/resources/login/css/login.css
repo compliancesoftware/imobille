@@ -19,21 +19,23 @@
 }
 
 .box-login {
-    width: calc(100% - 5rem);
+    width: 100%;
     max-width: 25rem;
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    position: fixed;
     top: 35%;
     left: 0;
-    margin: 0.5rem;
+    margin: auto;
     border-radius: 0.5rem;
     background-color: lightgray;
     z-index: 10;
 }
 
 .box-login input {
+    width: 95%;
+    width: -webkit-fill-available;
+    width: -moz-available;
     text-align: left;
     height: 1.3rem;
     border-radius: 0.5rem;
@@ -48,15 +50,12 @@
     text-align: center;
     color: white;
     background: linear-gradient(#9a0a0e,#660205);
+    background: -webkit-linear-gradient(#9a0a0e,#660205);
     padding: 0.5rem;
-    width: auto;
+    width: 100%;
+    width: -webkit-fill-available;
+    width: -moz-available;
     border-radius: 0.5rem;
     box-shadow: 0 1px 10px black;
-    margin-top: 0.5rem;
-}
-
-@media screen and (min-width: 450px){
-    .box-login {
-        margin-left: calc(50% - 14rem);
-    }
+    margin-top: 1rem;
 }

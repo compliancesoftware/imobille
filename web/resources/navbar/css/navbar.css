@@ -48,6 +48,7 @@
     font-size: 1.6rem;
     width: 1rem;
     margin-top: 0.2rem;
+    float: left;
 }
 
 .contatos {
@@ -102,7 +103,7 @@
     border-bottom: dimgray solid 0.02rem;
 }
 
-#link-sobre {
+.nav-item.nav-item-sobre {
     position: absolute;
     bottom: 0;
     margin-bottom: 1.9rem;
@@ -127,6 +128,7 @@
     margin-right: 0.5rem;
     margin-left: 1.7rem;
     color: dimgray;
+    float: left;
 }
 
 .nav-footer a {

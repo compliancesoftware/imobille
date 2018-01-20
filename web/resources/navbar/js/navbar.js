@@ -19,7 +19,8 @@ function appendToContatos(contatos) {
     $('.navbar .contatos').html('');
     $('.navbar .contatos').text('');
 
-    contatos.forEach(contato => {
+    for(var i = 0;i < contatos.length;i++) {
+        var contato = contatos[i];
         var item = '';
         if(contato.nome != 'blogger' && contato.nome != 'sexlog') {
             if(contato.nome == 'email') {
@@ -44,7 +45,7 @@ function appendToContatos(contatos) {
             item += '</div>';
         }
         $('.navbar .contatos').append(item);
-    });
+    }
 }
 
 function fillContatos() {

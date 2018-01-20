@@ -21,9 +21,11 @@
                     <div class="user-img" style="background-image: url(../resources/main/images/users/nouser.jpg);"></div>
                 </div>
                 <div class="box-login">
-                    <input type="text" id="login" placeholder="login">
-                    <input type="password" id="password" placeholder="senha">
-                    <a href="javascript:void(0);" onclick="login();" class="btn-login">Login</a>
+                    <div class="box-login-content">
+                        <input type="text" id="login" placeholder="login">
+                        <input type="password" id="password" placeholder="senha">
+                        <button href="javascript:void(0);" onclick="login();" class="btn-login">Login</button>
+                    </div>
                 </div>
             </div>
         </div>

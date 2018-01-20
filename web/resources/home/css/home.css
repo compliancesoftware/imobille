@@ -54,6 +54,7 @@
     height: auto;
     height: fit-content;
     height: -moz-fit-content;
+    height: intrinsic;
     min-height: 12rem;
     box-shadow: 1px 1px 5px 0 #757575;
     padding-bottom: 1rem;
@@ -65,10 +66,12 @@
     text-transform: uppercase;
     color: white;
     background: linear-gradient(#9a0a0e,#660205);
+    background: -webkit-linear-gradient(#9a0a0e,#660205);
     padding: 0.5rem;
     width: auto;
     width: fit-content;
     width: -moz-fit-content;
+    width: intrinsic;
     box-shadow: 0 1px 10px black;
 }
 
@@ -104,6 +107,7 @@
     width: auto;
     width: fit-content;
     width: -moz-fit-content;
+    width: intrinsic;
     background-color: rgba(0,0,0,0.75);
     padding: 0.5rem;
     color: white;

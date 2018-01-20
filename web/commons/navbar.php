@@ -33,7 +33,7 @@
                     <p>Entre em contato</p>
                 </div>
                 <div class="contatos"></div>
-                <div class="nav-item" id="link-sobre" onclick="changePage('/sobre');">
+                <div class="nav-item nav-item-sobre" id="link-sobre" onclick="changePage('/sobre');">
                     <i class="fa fa-question" aria-hidden="true"></i>
                     <p>Sobre nós</p>
                 </div>
