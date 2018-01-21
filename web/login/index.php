@@ -24,7 +24,7 @@
                     <div class="box-login-content">
                         <input type="text" id="login" placeholder="login">
                         <input type="password" id="password" placeholder="senha">
-                        <button href="javascript:void(0);" onclick="login();" class="btn-login">Login</button>
+                        <button onclick="login();" class="btn-login">Login</button>
                     </div>
                 </div>
             </div>

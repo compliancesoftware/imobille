@@ -29,6 +29,11 @@ p {
 }
 
 * {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+*:not(input.field) {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;

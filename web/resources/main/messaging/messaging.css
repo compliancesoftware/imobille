@@ -18,27 +18,27 @@
 }
 
 .modal-message-content {
-    width: calc(100% - 1rem);
+    width: 80%;
     display: flex;
     flex-direction: column;
     padding: 0rem;
     position: fixed;
     top: 30%;
     left: 0;
-    margin: 0.5rem;
+    margin: 10% !important;
     border-radius: 0.5rem;
     background-color: lightgray;
     z-index: 10;
 }
 
-.modal-message-content a {
+.modal-message-content button {
     text-transform: uppercase;
     text-align: center;
     color: white;
     background: linear-gradient(#9a0a0e,#660205);
     background: -webkit-linear-gradient(#9a0a0e,#660205);
     padding: 0.5rem;
-    width: auto;
+    width: 100%;
     border-radius: 0.5rem;
     box-shadow: 0 1px 10px black;
     margin-top: 0.5rem;
@@ -72,4 +72,29 @@
     margin-bottom: 1rem;
     overflow-wrap: break-word;
     word-wrap: break-word;
+}
+
+.toast {
+    display: none;
+}
+
+.toast, .toast-background, .toast-message {
+    text-align: center;
+    color: white;
+    width: 100%;
+    min-height: 2rem;
+    z-index: 6000;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.toast-background {
+    background-color: black;
+    opacity: 1;
+}
+
+.toast-message {
+    color: #fc1921;
+    padding-top: 0.4rem;
 }

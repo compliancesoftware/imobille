@@ -14,7 +14,7 @@ var Messaging = {
         element += '        <p class="modal-message-title" >' + title + '</p>';
         element += '        <div class="modal-message-body">';
         element += '            <p class="modal-message-text">' + message + '</p>';
-        element += '            <a href="javascript:void(0);" onclick="$(\'#modal_message' + message_id + '\').remove();">Ok</a>';
+        element += '            <button onclick="$(\'#modal_message' + message_id + '\').remove();">Ok</button>';
         element += '        </div>';
         element += '    </div>';
         element += '</div>';
