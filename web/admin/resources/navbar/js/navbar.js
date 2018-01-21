@@ -45,7 +45,8 @@ $('document').ready(function() {
             changePage('/admin/home#contas');
         });
     }
-    if(window.location.hash != '') {
-        active('.nav-item.'+window.location.hash.replace('#',''));
+    var hash = window.location.hash;
+    if(hash != '') {
+        active('.nav-item.'+hash.replace('#',''));
     }
 });

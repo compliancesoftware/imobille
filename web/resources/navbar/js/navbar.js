@@ -54,25 +54,25 @@ function fillContatos() {
     var contato1 = new Contato();
     contato1.id = 1;
     contato1.nome = 'facebook';
-    contato1.link = 'https://www.facebook.com';
+    contato1.link = 'https://www.facebook.com/';
     contatos.push(contato1);
 
     var contato2 = new Contato();
     contato2.id = 2;
     contato2.nome = 'twitter';
-    contato2.link = 'https://www.twitter.com';
+    contato2.link = 'https://twitter.com/';
     contatos.push(contato2);
 
     var contato3 = new Contato();
     contato3.id = 3;
     contato3.nome = 'instagram';
-    contato3.link = 'https://www.instagram.com';
+    contato3.link = 'https://www.instagram.com/';
     contatos.push(contato3);
 
     var contato4 = new Contato();
     contato4.id = 4;
     contato4.nome = 'whatsapp';
-    contato4.link = 'https://api.whatsapp.com/send?1=pt_BR&phone=5581996729491';
+    contato4.link = 'https://api.whatsapp.com/send?1=pt_BR&phone=';
     contatos.push(contato4);
 
     var contato5 = new Contato();
