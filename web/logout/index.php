@@ -6,6 +6,10 @@
         <script type='text/javascript' src='../resources/logout/js/logout.js'></script>
     </head>
     <body>
-        <script>logout();</script>
+        <script>
+            $('document').ready(function() {
+                logout();
+            });
+        </script>
     </body>
 </html>

@@ -4,7 +4,7 @@
         <?php require '../commons/header.php';?>
         <script src='../resources/home/js/home.js'></script>
         <link rel='stylesheet' href='../resources/home/css/home.css' />
-        <title>Imobille Site</title>
+        <title>Imobille WebApp</title>
 
         <?php require '../commons/slider.php';?>
     </head>

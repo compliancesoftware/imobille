@@ -49,6 +49,7 @@ function appendToContatos(contatos) {
 }
 
 function fillContatos() {
+    //TODO atualizar com as preferencias
     var contatos = [];
 
     var contato1 = new Contato();

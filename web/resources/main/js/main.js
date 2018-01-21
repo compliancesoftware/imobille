@@ -178,11 +178,13 @@ var Base64 = {
 var preferencias = null;
 
 $('document').ready(function() {
-    //TODO consultar servico de preferencias e preencher campos
     var url = window.location.protocol + '//' + window.location.host+'/back/br.com.imobille.controller/PreferenciasController/retrieve.php';
     var data = {};
     var dataType = 'json';
     $.get(url,data,function(response) {
-        preferencias = response;
+        var preferencias = response;
+        window.localStorage.setItem("preferencias",preferencias);
+        $('head title').text(preferencias.nome);
+        $('.header p').text(preferencias.nome);
     },dataType);
 });
