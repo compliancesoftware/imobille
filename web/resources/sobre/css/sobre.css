@@ -1,0 +1,27 @@
+html, body, .page, .content {
+    height: 100%;
+}
+
+.content {
+    background-color: whitesmoke;
+}
+
+.panel-sobre {
+    width: 100%;
+    margin: 1rem;
+    margin-top: 4rem;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 10px 0px grey;
+    overflow: auto;
+}
+
+.panel-sobre p {
+    margin-top: 1rem;
+    font-family: 'Roboto-Bold';
+}
+
+.panel-sobre p:last-child {
+    margin-top: 0rem;
+}

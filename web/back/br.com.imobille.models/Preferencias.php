@@ -3,7 +3,8 @@
         private $id = null;
         private $nome = '';
         private $cpfCnpj = '';
-        private $logo = '';
+		private $logo = '';
+		private $capa = '';
         private $email = '';
         private $telefone1 = '';
         private $telefone2 = '';
@@ -37,6 +38,12 @@
 		}
 		public function setLogo($logo) {
 			$this->logo = $logo;
+		}
+		public function getCapa() {
+			return $this->capa;
+		}
+		public function setCapa($capa) {
+			$this->capa = $capa;
 		}
 		public function getEmail() {
 			return $this->email;

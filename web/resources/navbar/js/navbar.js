@@ -49,44 +49,57 @@ function appendToContatos(contatos) {
 }
 
 function fillContatos() {
-    //TODO atualizar com as preferencias
+    var preferencias = JSON.parse(window.localStorage.getItem("preferencias"));
+    
     var contatos = [];
 
-    var contato1 = new Contato();
-    contato1.id = 1;
-    contato1.nome = 'facebook';
-    contato1.link = 'https://www.facebook.com/';
-    contatos.push(contato1);
+    if(preferencias.facebook != null && preferencias.facebook != '') {
+        var facebook = new Contato();
+        facebook.id = 1;
+        facebook.nome = 'facebook';
+        facebook.link = 'https://www.facebook.com/'+preferencias.facebook;
+        contatos.push(facebook);
+    }
 
-    var contato2 = new Contato();
-    contato2.id = 2;
-    contato2.nome = 'twitter';
-    contato2.link = 'https://twitter.com/';
-    contatos.push(contato2);
+    if(preferencias.twitter != null && preferencias.twitter != '') {
+        var twitter = new Contato();
+        twitter.id = 2;
+        twitter.nome = 'twitter';
+        twitter.link = 'https://twitter.com/'+preferencias.twitter;
+        contatos.push(twitter);
+    }
 
-    var contato3 = new Contato();
-    contato3.id = 3;
-    contato3.nome = 'instagram';
-    contato3.link = 'https://www.instagram.com/';
-    contatos.push(contato3);
+    if(preferencias.instagram != null && preferencias.instagram != '') {
+        var instagram = new Contato();
+        instagram.id = 3;
+        instagram.nome = 'instagram';
+        instagram.link = 'https://www.instagram.com/'+preferencias.instagram;
+        contatos.push(instagram);
+    }
 
-    var contato4 = new Contato();
-    contato4.id = 4;
-    contato4.nome = 'whatsapp';
-    contato4.link = 'https://api.whatsapp.com/send?1=pt_BR&phone=';
-    contatos.push(contato4);
+    if(preferencias.whatsapp != null && preferencias.whatsapp != '') {
+        var whatsapp = new Contato();
+        whatsapp.id = 3;
+        whatsapp.nome = 'whatsapp';
+        whatsapp.link = 'https://api.whatsapp.com/send?1=pt_BR&phone='+preferencias.whatsapp;
+        contatos.push(whatsapp);
+    }
 
-    var contato5 = new Contato();
-    contato5.id = 5;
-    contato5.nome = 'blogger';
-    contato5.link = 'https://www.blogger.com/about/?r=1-null_user';
-    contatos.push(contato5);
+    if(preferencias.blog != null && preferencias.blog != '') {
+        var blogger = new Contato();
+        blogger.id = 5;
+        blogger.nome = 'blogger';
+        blogger.link = 'https://'+preferencias.blog+'.blogspot.com.br/';
+        contatos.push(blogger);
+    }
 
-    var contato6 = new Contato();
-    contato6.id = 6;
-    contato6.nome = 'email';
-    contato6.link = 'douglasf.filho@gmail.com';
-    contatos.push(contato6);
+    if(preferencias.email != null && preferencias.email != '') {
+        var email = new Contato();
+        email.id = 6;
+        email.nome = 'email';
+        email.link = 'douglasf.filho@gmail.com';
+        contatos.push(email);
+    }
 
     appendToContatos(contatos);
 }

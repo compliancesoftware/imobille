@@ -175,16 +175,16 @@ var Base64 = {
     }
 }
 
-var preferencias = null;
-
 $('document').ready(function() {
     var url = window.location.protocol + '//' + window.location.host+'/back/br.com.imobille.controller/PreferenciasController/retrieve.php';
     var data = {};
     var dataType = 'json';
     $.get(url,data,function(response) {
         var preferencias = response;
-        window.localStorage.setItem("preferencias",preferencias);
+        window.localStorage.setItem("preferencias",JSON.stringify(preferencias));
         $('head title').text(preferencias.nome);
         $('.header p').text(preferencias.nome);
+        $('.header-img').css('background-image','url("data:image/png;base64,'+preferencias.logo+'")');
+        $('.cover').css('background-image','url("data:image/png;base64,'+preferencias.capa+'")');
     },dataType);
 });

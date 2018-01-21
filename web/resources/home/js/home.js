@@ -96,12 +96,10 @@ $('document').ready(function(){
         $('.cover').css('opacity',''+opacity);
 
         if(window.scrollY >= 179) {
-            $('.navbar-toggle-btn').css('background-color','#9d0a0e');
-            $('.navbar-toggle-btn').css('color','white');
+            $('.navbar-toggle-btn').addClass('navbar-inverted-btn');
         }
         else {
-            $('.navbar-toggle-btn').css('background-color','transparent');
-            $('.navbar-toggle-btn').css('color','#9d0a0e');
+            $('.navbar-toggle-btn').removeClass('navbar-inverted-btn');
         }
     });
 

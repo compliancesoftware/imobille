@@ -12,10 +12,12 @@
     // $preferencias->setCpfCnpj('08468331406');
     // $logo = base64_encode(file_get_contents('logo.jpg'));
     // $preferencias->setLogo($logo);
+    // $capa = base64_encode(file_get_contents('cover.png'));
+    // $preferencias->setCapa($capa);
     // $preferencias->setEmail('douglasf.filho@gmail.com');
     // $preferencias->setTelefone1('81996729491');
     // $preferencias->setTelefone2('81988874815');
-    // $preferencias->setBlog('');
+    // $preferencias->setBlog('umminuto1minuto');
     // $preferencias->setWhatsapp('81988874815');
     // $preferencias->setInstagram('douglas.fernandes.filho');
     // $preferencias->setTwitter('FilhoEu');

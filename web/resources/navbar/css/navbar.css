@@ -151,3 +151,8 @@
     padding-left: 0.5rem;
     padding-top: 0.3rem;
 }
+
+.navbar-inverted-btn {
+    background-color:#9d0a0e;
+    color: white;
+}
