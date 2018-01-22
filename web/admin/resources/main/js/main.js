@@ -174,3 +174,87 @@ var Base64 = {
         return string;
     }
 }
+
+function isNumber(string) {
+    var mask = '0123456789';
+    for(var i = 0;i < string.length;i++) {
+        if(mask.indexOf(string[i]) < 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function onlyNumbers(number) {
+    var numero = '';
+    for(var i = 0;i < number.length;i++) {
+        if(isNumber(number[i])) {
+            numero += number[i];
+        }
+    }
+    return numero;
+}
+
+var PhoneFormat = {
+    _mask: '(xx) x xxxx-xxxx',
+    format: function(number) {
+        var numero = onlyNumbers(number);
+        var result = PhoneFormat._mask;
+        for(var i = 0;i < numero.length;i++) {
+            result = result.replace('x',''+numero[i]);
+        }
+
+        return result;
+    },
+    unformat: function(number) {
+        return onlyNumbers(number);
+    }
+}
+
+var CpfCnpjFormat = {
+    _cpf_mask: 'xxx.xxx.xxx-xx',
+    _cnpj_mask: 'xx.xxx.xxx/xxxx-xx',
+    format: function(number) {
+        var numero = CpfCnpjFormat.unformat(number);
+        var result = '';
+        if(numero.length <= 11) {
+            result = CpfCnpjFormat._cpf_mask;
+        }
+        else {
+            result = CpfCnpjFormat._cnpj_mask;
+        }
+
+        for(var i = 0;i < numero.length;i++) {
+            result = result.replace('x',''+numero[i]);
+        }
+
+        for(var i = 0;i < result.length;i++) {
+            result = result.replace('x','0');
+        }
+
+        return result;
+    },
+    unformat: function(number) {
+        return onlyNumbers(number);
+    }
+}
+
+function applyCpfCnpjFilter(inputField) {
+    $(inputField).attr('type','text');
+    var value = $(inputField).val();
+    value = CpfCnpjFormat.format(value);
+    $(inputField).val(value);
+}
+
+function removeCpfCnpjFilter(inputField) {
+    var value = $(inputField).val();
+    value = CpfCnpjFormat.unformat(value);
+    $(inputField).attr('type','number');
+    $(inputField).val(value);
+}
+
+function cpfCnpjOnKey(event) {
+    if(isNumber(''+event.key)) {
+        event.preventDefault();
+    }
+}

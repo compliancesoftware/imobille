@@ -1,0 +1,57 @@
+html, body, .page, .content {
+    height: 100%;
+}
+
+.content {
+    background-color: whitesmoke;
+}
+
+.panel-preferencias {
+    width: 100%;
+    margin: 0.5rem;
+    margin-bottom: 4.5rem;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 10px 0px grey;
+    overflow: auto;
+    color: gray;
+}
+
+.panel-preferencias input {
+    margin-bottom: 0.5rem;
+    width: 98.5%;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    height: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.panel-preferencias label {
+    margin-top: 1rem;
+}
+
+.panel-preferencias-image {
+    margin: auto;
+    margin-top: 1rem;
+    height: 7.5rem;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    box-shadow: 0 0 0 5px rgba(175, 175, 175, 0.5), inset 0 1px 2px 0 rgba(0,0,0,0.3);
+    margin-bottom: 1rem;
+}
+
+.logo-image {
+    max-width: 7.5rem;
+    border-radius: 4.5rem;
+}
+
+.cover-image {
+    width: auto;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    max-width: 50rem;
+    height: 25%;
+}

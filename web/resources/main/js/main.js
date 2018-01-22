@@ -175,6 +175,19 @@ var Base64 = {
     }
 }
 
+var PhoneFormat = {
+    _mask: '(xx) x xxxx-xxxx',
+    format: function(number) {
+        var numero = number.replace(/D/g,'');
+        var result = PhoneFormat._mask;
+        for(var i = 0;i < numero.length;i++) {
+            result = result.replace('x',''+numero[i]);
+        }
+
+        return result;
+    }
+}
+
 $('document').ready(function() {
     var url = window.location.protocol + '//' + window.location.host+'/back/br.com.imobille.controller/PreferenciasController/retrieve.php';
     var data = {};
