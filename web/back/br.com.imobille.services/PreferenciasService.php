@@ -12,7 +12,14 @@
         }
 
         public function updatePreferencias($preferencias) {
-            $response = $this->preferenciasDao->updatePreferencias($preferencias);
+            if(isset($_SESSION['logado']) && $_SESSION['logado'] != '') {
+                $response = $this->preferenciasDao->updatePreferencias($preferencias);
+            }
+            else {
+                $response = new ResponseMessage();
+                $response->setMessage('Login ou senha inválidos.');
+            }
+            
             return $response->serialize();
         }
 

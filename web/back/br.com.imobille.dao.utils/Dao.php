@@ -176,7 +176,8 @@
             try {
                 $connection = $this->conn;
                 if($connection != null) {
-                    $statement = $connection->prepare('UPDATE '.$className.' SET '.$objdata.' WHERE id = '.$object->getId());
+                    $sql = 'UPDATE '.$className.' SET '.$objdata.' WHERE id = '.$object->getId();
+                    $statement = $connection->prepare($sql);
                     $statement->execute($objectToPersist);
                     $mensagem = new ResponseMessage();
                     $mensagem->setMessage('Atualizado com êxito.');

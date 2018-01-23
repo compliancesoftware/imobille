@@ -175,17 +175,112 @@ var Base64 = {
     }
 }
 
+function isNumber(string) {
+    var mask = '0123456789';
+    for(var i = 0;i < string.length;i++) {
+        if(mask.indexOf(string[i]) < 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function onlyNumbers(number) {
+    var numero = '';
+    for(var i = 0;i < number.length;i++) {
+        if(isNumber(number[i])) {
+            numero += number[i];
+        }
+    }
+    return numero;
+}
+
+function acceptNumbers(event, maxInputLength) {
+    if($(event.target).val().length < maxInputLength) {
+        if(isNumber(''+event.key)) {
+            return event.key;
+        }
+        event.preventDefault();
+    }
+    event.preventDefault();
+}
+
 var PhoneFormat = {
     _mask: '(xx) x xxxx-xxxx',
     format: function(number) {
-        var numero = number.replace(/D/g,'');
+        var numero = onlyNumbers(number);
         var result = PhoneFormat._mask;
         for(var i = 0;i < numero.length;i++) {
             result = result.replace('x',''+numero[i]);
         }
+        for(var i = 0;i < result.length;i++) {
+            result = result.replace('x','0');
+        }
+        return result;
+    },
+    unformat: function(number) {
+        return onlyNumbers(number);
+    }
+}
+
+var CpfCnpjFormat = {
+    _cpf_mask: 'xxx.xxx.xxx-xx',
+    _cnpj_mask: 'xx.xxx.xxx/xxxx-xx',
+    format: function(number) {
+        var numero = CpfCnpjFormat.unformat(number);
+        var result = '';
+        if(numero.length <= 11) {
+            result = CpfCnpjFormat._cpf_mask;
+        }
+        else {
+            result = CpfCnpjFormat._cnpj_mask;
+        }
+
+        for(var i = 0;i < numero.length;i++) {
+            result = result.replace('x',''+numero[i]);
+        }
+
+        for(var i = 0;i < result.length;i++) {
+            result = result.replace('x','0');
+        }
 
         return result;
+    },
+    unformat: function(number) {
+        return onlyNumbers(number);
     }
+}
+
+function getFormatter(inputField) {
+    if($(inputField).hasClass('cpf-cnpj-field')) {
+        return CpfCnpjFormat;
+    }
+    else if($(inputField).hasClass('phone-field')) {
+        return PhoneFormat;
+    }
+    return null;
+}
+
+function filterSetting(mode, formatter, inputField) {
+    $(inputField).attr('type','text');
+    var value = $(inputField).val();
+    if(mode == 'format') {
+        value = formatter.format(value);
+    }
+    else if (mode == 'unformat') {
+        value = formatter.unformat(value);
+    }
+    $(inputField).val(value);
+}
+
+function formatField(inputField) {
+    var formatter = getFormatter(inputField);
+    filterSetting('format', formatter, inputField);
+}
+
+function unformatField(inputField) {
+    var formatter = getFormatter(inputField);
+    filterSetting('unformat', formatter, inputField);
 }
 
 $('document').ready(function() {

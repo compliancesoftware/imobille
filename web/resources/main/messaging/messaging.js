@@ -32,9 +32,9 @@ var Messaging = {
         element+='    <p class="toast-message">'+message+'</p>';
         element+='</div>';
         $('body').append(element);
-        $('.toast').fadeToggle('slow',function() {
+        $('.toast').toggle('slide',{direction: 'up'},500, function() {
             setTimeout(function() {
-                $('.toast').fadeToggle('slow',function() {
+                $('.toast').toggle('slide',{direction: 'up'},500, function() {
                     $('.toast').remove();
                 });
             },time?time:Messaging._toast_time);

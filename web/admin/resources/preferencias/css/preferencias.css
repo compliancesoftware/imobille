@@ -18,7 +18,7 @@ html, body, .page, .content {
     color: gray;
 }
 
-.panel-preferencias input {
+.panel-preferencias input, .panel-preferencias textarea {
     margin-bottom: 0.5rem;
     width: 98.5%;
     width: -moz-available;
@@ -26,10 +26,18 @@ html, body, .page, .content {
     height: 1rem;
     padding: 0.5rem;
     border-radius: 0.5rem;
+    color: #9d0a0e;
+}
+
+.panel-preferencias textarea {
+    height: 5rem;
+    resize: none;
+    font-family: 'Roboto';
 }
 
 .panel-preferencias label {
     margin-top: 1rem;
+    color: #9d0a0e;
 }
 
 .panel-preferencias-image {
@@ -54,4 +62,19 @@ html, body, .page, .content {
     width: -webkit-fill-available;
     max-width: 50rem;
     height: 25%;
+    background-size: contain;
+}
+
+.panel-preferencias-submit {
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    background: linear-gradient(#9a0a0e,#660205);
+    background: -webkit-linear-gradient(#9a0a0e,#660205);
+    padding: 0.5rem;
+    width: 100%;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 10px black;
 }

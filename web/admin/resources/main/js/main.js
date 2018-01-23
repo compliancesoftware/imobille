@@ -195,6 +195,16 @@ function onlyNumbers(number) {
     return numero;
 }
 
+function acceptNumbers(event, maxInputLength) {
+    if($(event.target).val().length < maxInputLength) {
+        if(isNumber(''+event.key)) {
+            return event.key;
+        }
+        event.preventDefault();
+    }
+    event.preventDefault();
+}
+
 var PhoneFormat = {
     _mask: '(xx) x xxxx-xxxx',
     format: function(number) {
@@ -203,7 +213,9 @@ var PhoneFormat = {
         for(var i = 0;i < numero.length;i++) {
             result = result.replace('x',''+numero[i]);
         }
-
+        for(var i = 0;i < result.length;i++) {
+            result = result.replace('x','0');
+        }
         return result;
     },
     unformat: function(number) {
@@ -239,22 +251,34 @@ var CpfCnpjFormat = {
     }
 }
 
-function applyCpfCnpjFilter(inputField) {
+function getFormatter(inputField) {
+    if($(inputField).hasClass('cpf-cnpj-field')) {
+        return CpfCnpjFormat;
+    }
+    else if($(inputField).hasClass('phone-field')) {
+        return PhoneFormat;
+    }
+    return null;
+}
+
+function filterSetting(mode, formatter, inputField) {
     $(inputField).attr('type','text');
     var value = $(inputField).val();
-    value = CpfCnpjFormat.format(value);
-    $(inputField).val(value);
-}
-
-function removeCpfCnpjFilter(inputField) {
-    var value = $(inputField).val();
-    value = CpfCnpjFormat.unformat(value);
-    $(inputField).attr('type','number');
-    $(inputField).val(value);
-}
-
-function cpfCnpjOnKey(event) {
-    if(isNumber(''+event.key)) {
-        event.preventDefault();
+    if(mode == 'format') {
+        value = formatter.format(value);
     }
+    else if (mode == 'unformat') {
+        value = formatter.unformat(value);
+    }
+    $(inputField).val(value);
+}
+
+function formatField(inputField) {
+    var formatter = getFormatter(inputField);
+    filterSetting('format', formatter, inputField);
+}
+
+function unformatField(inputField) {
+    var formatter = getFormatter(inputField);
+    filterSetting('unformat', formatter, inputField);
 }
