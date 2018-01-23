@@ -81,7 +81,7 @@ function fillContatos() {
         var whatsapp = new Contato();
         whatsapp.id = 3;
         whatsapp.nome = 'whatsapp';
-        whatsapp.link = 'https://api.whatsapp.com/send?1=pt_BR&phone='+preferencias.whatsapp;
+        whatsapp.link = 'https://api.whatsapp.com/send?1=pt_BR&phone=55'+preferencias.whatsapp;
         contatos.push(whatsapp);
     }
 
