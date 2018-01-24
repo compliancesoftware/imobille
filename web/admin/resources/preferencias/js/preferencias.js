@@ -44,8 +44,10 @@ function updatePreferences() {
     preferencias.id = $('#id').val();
     preferencias.nome = $('#nome').val();
     preferencias.cpfCnpj = CpfCnpjFormat.unformat($('#cpfCnpj').val());
-    preferencias.logo = $('.panel-preferencias-image.logo-image').css('background-image').replace('url("','').replace('")','').replace('data:image/png;base64,','');
-    preferencias.capa = $('.panel-preferencias-image.cover-image').css('background-image').replace('url("','').replace('")','').replace('data:image/png;base64,','');
+    preferencias.logo = $('.panel-preferencias-image.logo-image').css('background-image').replace('url("','').replace('")','');
+    preferencias.logo = preferencias.logo.substring(preferencias.logo.indexOf('base64,') + 7);
+    preferencias.capa = $('.panel-preferencias-image.cover-image').css('background-image').replace('url("','').replace('")','');
+    preferencias.capa = preferencias.capa.substring(preferencias.capa.indexOf('base64,') + 7);
     preferencias.email = $('#email').val();
     preferencias.telefone1 = PhoneFormat.format($('#telefone1').val());
     preferencias.telefone2 = PhoneFormat.format($('#telefone2').val());

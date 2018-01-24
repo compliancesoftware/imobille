@@ -67,6 +67,7 @@ html, body, .page, .content {
 }
 
 .panel-preferencias-submit {
+    cursor: pointer;
     position: fixed;
     left: 0;
     bottom: 0;
