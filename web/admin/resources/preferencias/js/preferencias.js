@@ -49,8 +49,8 @@ function updatePreferences() {
     preferencias.capa = $('.panel-preferencias-image.cover-image').css('background-image').replace('url("','').replace('")','');
     preferencias.capa = preferencias.capa.substring(preferencias.capa.indexOf('base64,') + 7);
     preferencias.email = $('#email').val();
-    preferencias.telefone1 = PhoneFormat.format($('#telefone1').val());
-    preferencias.telefone2 = PhoneFormat.format($('#telefone2').val());
+    preferencias.telefone1 = PhoneFormat.unformat($('#telefone1').val());
+    preferencias.telefone2 = PhoneFormat.unformat($('#telefone2').val());
     preferencias.blog = $('#blog').val();
     preferencias.whatsapp = $('#whatsapp').val();
     preferencias.instagram = $('#instagram').val();
