@@ -65,6 +65,17 @@ function fillLancamentos() {
     },dataType);
 }
 
+function doExternalClickVerification() {
+    var hasTag = window.location.href.indexOf('tag=');
+    if(hasTag > -1) {
+        var tag = '#' + window.location.href.substring(hasTag).replace('tag=','');
+        externalClickNavItem(tag);
+    }
+    else {
+        activeNavItem('#link-home');
+    }
+}
+
 window.onpageshow = function() {
     setTimeout(function() {
         applySlicker();
@@ -75,6 +86,8 @@ window.onpageshow = function() {
             setTimeout(function() {
                 hideLoading();
                 canMove = true;
+
+                doExternalClickVerification();
             },500);
         }, 1000);
     }, 1000);

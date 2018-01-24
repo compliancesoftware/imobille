@@ -12,11 +12,11 @@ function login() {
     };
     var dataType = 'json';
     $.post(url,data,function(response) {
+        hideLoading();
         if(response.status == 'Ok') {
             changePage('/admin');
         }
         else {
-            hideLoading();
             Messaging.showMessage('login','Erro',response.message);
         }
     },dataType).fail(function() {

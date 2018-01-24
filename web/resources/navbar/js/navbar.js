@@ -104,40 +104,20 @@ function fillContatos() {
     appendToContatos(contatos);
 }
 
-function  clickLancamentos(item) {
-    activeNavItem(item);
+function clickNavItem(item) {
+    var itemId = '#'+$(item).attr('id');
+    activeNavItem(itemId);
     toggleNavBar();
-    moveToLocation('#lancamentos');
-    if(window.location.href.indexOf('/home') > -1) {
-        window.location.hash = 'lancamentos';
-    }
-    else {
-        changePage('/home/#lancamentos');
+    var tag = itemId.replace('#link-','');
+    moveToLocation('#'+ tag);
+    if(window.location.href.indexOf('/home') < 0) {
+        changePage('/home?tag=' + tag);
     }
 }
 
-function  clickUsados(item) {
-    activeNavItem(item);
-    toggleNavBar();
-    moveToLocation('#usados');
-    if(window.location.href.indexOf('/home') > -1) {
-        window.location.hash = 'usados';
-    }
-    else {
-        changePage('/home/#usados');
-    }
-}
-
-function  clickAluguel(item) {
-    activeNavItem(item);
-    toggleNavBar();
-    moveToLocation('#aluguel');
-    if(window.location.href.indexOf('/home') > -1) {
-        window.location.hash = 'aluguel';
-    }
-    else {
-        changePage('/home/#aluguel');
-    }
+function externalClickNavItem(tag) {
+    activeNavItem('#link-' + tag.replace('#',''));
+    moveToLocation(tag);
 }
 
 function  clickContato() {
@@ -151,13 +131,4 @@ function  clickContato() {
 
 $('document').ready(function(){
     fillContatos();
-
-    if(window.location.hash == '') {
-        $('#link-home').addClass('nav-item-active');
-    }
-    else {
-        var item = '#link-'+window.location.hash.substring(1);
-        activeNavItem(item);
-        moveToLocation(window.location.hash);
-    }
 });

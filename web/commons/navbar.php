@@ -12,15 +12,15 @@
                     <i class="fa fa-home" aria-hidden="true"></i>
                     <p>Home</p>
                 </div>
-                <div class="nav-item" id="link-lancamentos" onclick="clickLancamentos(this);">
+                <div class="nav-item" id="link-lancamentos" onclick="clickNavItem(this);">
                     <i class="fa fa-building-o" aria-hidden="true"></i>
                     <p>Lançamentos</p>
                 </div>
-                <div class="nav-item" id="link-usados" onclick="clickUsados(this);">
+                <div class="nav-item" id="link-usados" onclick="clickNavItem(this);">
                     <i class="fa fa-handshake-o" aria-hidden="true"></i>
                     <p>Usados</p>
                 </div>
-                <div class="nav-item" id="link-aluguel"  onclick="clickAluguel(this);">
+                <div class="nav-item" id="link-aluguel"  onclick="clickNavItem(this);">
                     <i class="fa fa-newspaper-o" aria-hidden="true"></i>
                     <p>Aluguel</p>
                 </div>

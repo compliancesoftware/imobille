@@ -19,11 +19,11 @@
                     <label for="cpfCnpj">CPF ou CNPJ*:</label>
                     <input type="text" id="cpfCnpj" class="cpf-cnpj-field" placeholder="CPF/CNPJ" title="CPF ou CNPJ da empresa." onclick="unformatField(this);" onblur="formatField(this);" onkeypress="acceptNumbers(event, 14);">
                     
-                    <label for="logo">Escolha sua logo:</label>
+                    <label for="logo">Escolha sua logo: (Dê preferencia a imagem 280px X 280px centralizada)</label>
                     <input type="file" id="logo" style="display: none;" onchange="showPreview('.logo-image',this);">
                     <div class="panel-preferencias-image logo-image" onclick="chooseLogoImage();"></div>
                     
-                    <label for="capa">Escolha a capa do site:</label>
+                    <label for="capa">Escolha a capa do site: (Dê preferencia a imagem 530px X 310px)</label>
                     <input type="file" id="capa" style="display: none;" onchange="showPreview('.cover-image',this);">
                     <div class="panel-preferencias-image cover-image" onclick="chooseCoverImage();"></div>
                     

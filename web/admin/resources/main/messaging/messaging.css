@@ -35,8 +35,7 @@
     text-transform: uppercase;
     text-align: center;
     color: white;
-    background: linear-gradient(#9a0a0e,#660205);
-    background: -webkit-linear-gradient(#9a0a0e,#660205);
+    background-color: #9a0a0e;
     padding: 0.5rem;
     width: 100%;
     border-radius: 0.5rem;
