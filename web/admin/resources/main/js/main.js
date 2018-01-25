@@ -1,5 +1,14 @@
 var canMove = false;
 
+function isValidField(field) {
+    if(field !== undefined && field != null && field != '') {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
 function monetize(number) {
     var number = number.toFixed(2).split('.');
     number[0] = "R$ " + number[0].split(/(?=(?:...)*$)/).join('.');

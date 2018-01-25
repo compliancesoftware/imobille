@@ -4,6 +4,11 @@
             parent::__construct();
         }
 
+        public function retrievePerfis() {
+            $perfil = new Perfil();
+            return parent::retrieve($perfil);
+        }
+
         private function getByNomeOuEmail($nomeOuEmail) {
             try {
                 $connection = $this->conn;
@@ -67,10 +72,6 @@
             $perfil->setAtualizadoEm($now);
             
             return parent::update($perfil);
-        }
-
-        public function deletePerfil($perfil) {
-            return parent::delete($perfil);
         }
     }
 ?>

@@ -6,7 +6,7 @@ html, body, .page, .content {
     background-color: whitesmoke;
 }
 
-.panel-preferencias {
+.panel-conta {
     width: 100%;
     margin: 0.5rem;
     margin-bottom: 6rem;
@@ -18,7 +18,7 @@ html, body, .page, .content {
     color: gray;
 }
 
-.panel-preferencias input, .panel-preferencias textarea {
+.panel-conta input {
     margin-bottom: 0.5rem;
     width: 98.5%;
     width: -moz-available;
@@ -29,44 +29,12 @@ html, body, .page, .content {
     color: gray;
 }
 
-.panel-preferencias textarea {
-    height: 5rem;
-    resize: none;
-    font-family: 'Roboto';
-}
-
-.panel-preferencias label {
+.panel-conta label {
     margin-top: 1rem;
     color: #9d0a0e;
 }
 
-.panel-preferencias-image {
-    cursor: pointer;
-    margin: auto;
-    margin-top: 1rem;
-    height: 7.5rem;
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: center;
-    box-shadow: 0 0 0 5px rgba(175, 175, 175, 0.5), inset 0 1px 2px 0 rgba(0,0,0,0.3);
-    margin-bottom: 1rem;
-}
-
-.logo-image {
-    max-width: 7.5rem;
-    border-radius: 4.5rem;
-}
-
-.cover-image {
-    width: auto;
-    width: -moz-available;
-    width: -webkit-fill-available;
-    max-width: 50rem;
-    height: 50vw;
-    background-size: contain;
-}
-
-.panel-preferencias-submit {
+.conta-controls-create {
     cursor: pointer;
     position: fixed;
     left: 0;
@@ -82,19 +50,57 @@ html, body, .page, .content {
     box-shadow: 0 1px 10px black;
 }
 
+.conta {
+    border: black dotted 0.1rem;
+    border-radius: 0.6rem;
+    padding: 1rem;
+    overflow: auto;
+}
+
+.conta-foto {
+    cursor: pointer;
+    margin: auto;
+    margin-top: 1rem;
+    height: 7.5rem;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    box-shadow: 0 0 0 5px rgba(175, 175, 175, 0.5), inset 0 1px 2px 0 rgba(0,0,0,0.3);
+    margin-bottom: 1rem;
+    max-width: 7.5rem;
+    border-radius: 4.5rem;
+}
+
+.conta-controlls-button {
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.conta-controlls-block {
+    background-color: red;
+    border: lightcoral solid 0.1rem;
+    float: left;
+    box-shadow: 1px 0 10px 1px red;
+}
+
+.conta-controlls-edit {
+    background-color: green;
+    border: lightgreen solid 0.1rem;
+    float: right;
+    box-shadow: 1px 0 10px 1px green;
+}
+
 @media screen and (min-width: 44rem){
-    .panel-preferencias {
+    .panel-conta {
         width: 65%;
         margin: auto;
         margin-top: 0.5rem;
         margin-bottom: 6rem;
     }
 
-    .cover-image {
-        height: 25vw;
-    }
-
-    .panel-preferencias-submit {
+    .conta-controls-create {
         width: 67.5%;
         left: 16.25%;
         margin: auto;

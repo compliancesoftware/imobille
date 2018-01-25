@@ -6,13 +6,47 @@
             $this->perfilDao = new PerfilDao();
         }
 
+        public function retrievePerfis() {
+            $logado = null;
+            $response = null;
+            
+            if(isset($_SESSION['logado']) && $_SESSION['logado'] != '') {
+                $logado = unserialize($_SESSION['logado']);
+                $response = $this->perfilDao->retrievePerfis();
+                if($logado->getPermissao() != 'Administrador') {
+                    foreach($response as &$perfil) {
+                        if($perfil->getId() == $logado->getId()) {
+                            $response = $perfil;
+                        }
+                    }
+                }
+            }
+            else {
+                $response = new ResponseMessage();
+                $response->setMessage('Login ou senha inválidos.');
+            }
+            
+            if(is_array($response)) {
+                return Jsonify::arrayToJson($response);
+            }
+            else {
+                return $response->serialize();
+            }
+        }
+
         public function createPerfil($perfil) {
             $logado = null;
             $response = null;
             
             if(isset($_SESSION['logado']) && $_SESSION['logado'] != '') {
                 $logado = unserialize($_SESSION['logado']);
-                $response = $this->perfilDao->createPerfil($perfil);
+                if($logado->getPermissao() == 'Administrador') {
+                    $response = $this->perfilDao->createPerfil($perfil);
+                }
+                else {
+                    $response = new ResponseMessage();
+                    $response->setMessage('Permissões insuficientes.');
+                }
             }
             else {
                 $response = new ResponseMessage();
@@ -23,12 +57,29 @@
         }
 
         public function updatePerfil($perfil) {
-            $response = $this->perfilDao->updatePerfil($perfil);
-            return $response->serialize();
-        }
-
-        public function deletePerfil($perfil) {
-            $response = $this->perfilDao->deletePerfil($perfil);
+            $logado = null;
+            $response = null;
+            
+            if(isset($_SESSION['logado']) && $_SESSION['logado'] != '') {
+                $logado = unserialize($_SESSION['logado']);
+                if($logado->getPermissao() == 'Administrador') {
+                    $response = $this->perfilDao->updatePerfil($perfil);
+                }
+                else {
+                    if($logado->getId() == $perfil->getId()) {
+                        $response = $this->perfilDao->updatePerfil($perfil);
+                    }
+                    else {
+                        $response = new ResponseMessage();
+                        $response->setMessage('Permissões insuficientes.');
+                    }
+                }
+            }
+            else {
+                $response = new ResponseMessage();
+                $response->setMessage('Login ou senha inválidos.');
+            }
+            
             return $response->serialize();
         }
 

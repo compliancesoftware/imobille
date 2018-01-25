@@ -30,6 +30,8 @@
                     <p onclick="changePage('/admin/construtoras');"><i class="fa fa-building-o" aria-hidden="true"></i>Construtoras</p>
                     <p onclick="changePage('/admin/preferencias');"><i class="fa fa-cogs" aria-hidden="true"></i>Preferências</p>
                     <div class="popup-content-separator"></div>
+                    <p onclick="changePage('/admin/conta');"><i class="fa fa-user" aria-hidden="true"></i>Gerenciar Conta</p>
+                    <div class="popup-content-separator"></div>
                     <p onclick="changePage('/logout');"><i class="fa fa-power-off" aria-hidden="true"></i>Sair</p>
                 </div>
             </div>

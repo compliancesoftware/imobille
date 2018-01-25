@@ -29,7 +29,6 @@ function requestPreferencesToUpdate(preferencias) {
     var data = {preferencias: preferencias};
     var dataType = 'json';
     $.post(url,data,function(response) {
-        console.log(response);
         Messaging.toast(response.message);
         if(response.status == 'Ok') {
             window.localStorage.setItem("preferencias",JSON.stringify(preferencias));
@@ -58,7 +57,32 @@ function updatePreferences() {
     preferencias.facebook = $('#facebook').val();
     preferencias.sobre = $('#sobre').val();
 
-    requestPreferencesToUpdate(preferencias);
+    if(isValidField(preferencias.nome)) {
+        if(isValidField(preferencias.cpfCnpj) && preferencias.cpfCnpj != '00000000000') {
+            if(isValidField(preferencias.email)) {
+                if(isValidField(preferencias.telefone1) && preferencias.telefone1 != '00000000000') {
+                    if(isValidField(preferencias.sobre)) {
+                        requestPreferencesToUpdate(preferencias);
+                    }
+                    else {
+                        Messaging.showMessage('erro_sobre','Erro','O campo "Sobre" não pode ficar em branco.');
+                    }
+                }
+                else {
+                    Messaging.showMessage('erro_telefone','Erro','O campo "Telefone" não pode ficar em branco.');
+                }
+            }
+            else {
+                Messaging.showMessage('erro_email','Erro','O campo "E-mail" não pode ficar em branco.');
+            }
+        }
+        else {
+            Messaging.showMessage('erro_cpf_cnpj','Erro','O campo "CPF ou CNPJ" não pode ficar em branco.');
+        }
+    }
+    else {
+        Messaging.showMessage('erro_nome','Erro','O campo "Nome" não pode ficar em branco.');
+    }
 }
 
 function setPreferencias(preferencias) {
@@ -82,6 +106,8 @@ function setPreferencias(preferencias) {
 }
 
 $('document').ready(function() {
+    showLoading();
+    
     var url = window.location.protocol + '//' + window.location.host+'/back/br.com.imobille.controller/PreferenciasController/retrieve.php';
     var data = {};
     var dataType = 'json';
