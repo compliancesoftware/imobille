@@ -33,7 +33,7 @@ p {
     padding: 0 0 0 0;
 }
 
-input:focus, textarea:focus {
+input:focus, textarea:focus, select:focus {
     outline: #9a0a0e dotted 2px;
 }
 
@@ -119,4 +119,63 @@ small {
 
 .slick-prev:focus, .slick-next:focus {
     color: #9a0a0e !important;
+}
+
+.modal-box {
+    display: none;
+    position: fixed;
+    z-index: 6000;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.modal-box-background {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.9;
+}
+
+.modal-box-content {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 0rem;
+    position: fixed;
+    top: 0%;
+    left: 0;
+    margin: 10% !important;
+    border-radius: 0.5rem;
+    background-color: lightgray;
+    z-index: 10;
+}
+
+.modal-box-title {
+    padding: 0.5rem;
+    background-color: #9a0a0e;
+    color: white;
+    text-align: center;
+}
+
+.modal-box-content button {
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    padding: 0.5rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 10px black;
+    margin-top: 0.5rem;
+}
+
+.modal-box-btn-update {
+    background-color: green;
+}
+
+.modal-box-btn-cancel {
+    background-color: red;
 }

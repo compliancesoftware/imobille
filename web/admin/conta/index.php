@@ -10,7 +10,7 @@
         <div class="page">
             <?php require '../commons/navbar.php';?>
             <div class="content">
-                <button class="conta-controls-create">Nova Conta</button>
+                <button class="conta-controls-create" onclick="modalNovoPerfil();">Nova Conta</button>
                 <div class="panel-conta">
                     
                 </div>

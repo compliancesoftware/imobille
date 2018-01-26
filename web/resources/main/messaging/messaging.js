@@ -8,13 +8,13 @@ var Messaging = {
         }
 
         var element = '';
-        element += '<div class="modal-message" id="modal_message' + message_id + '">';
-        element += '    <div class="modal-message-background"></div>';
-        element += '    <div class="modal-message-content">';
-        element += '        <p class="modal-message-title" >' + title + '</p>';
+        element += '<div class="modal-box" id="modal_message' + message_id + '">';
+        element += '    <div class="modal-box-background"></div>';
+        element += '    <div class="modal-box-content">';
+        element += '        <p class="modal-box-title" >' + title + '</p>';
         element += '        <div class="modal-message-body">';
         element += '            <p class="modal-message-text">' + message + '</p>';
-        element += '            <button onclick="$(\'#modal_message' + message_id + '\').remove();">Ok</button>';
+        element += '            <button class="modal-box-btn-cancel" onclick="$(\'#modal_message' + message_id + '\').remove();">Ok</button>';
         element += '        </div>';
         element += '    </div>';
         element += '</div>';

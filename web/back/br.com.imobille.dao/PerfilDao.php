@@ -67,11 +67,23 @@
         }
 
         public function updatePerfil($perfil) {
+            $perfilParaAtualizar = parent::getById($perfil->getId(), $perfil);
+
+            $perfilParaAtualizar->setNome($perfil->getNome());
+            if($perfil->getSenha() != '<secret>') {
+                $perfilParaAtualizar->setSenha($perfil->getSenha());
+            }
+            
+            $perfilParaAtualizar->setEmail($perfil->getEmail());
+            $perfilParaAtualizar->setTelefone($perfil->getTelefone());
+            $perfilParaAtualizar->setFoto($perfil->getFoto());
+            $perfilParaAtualizar->setPermissao($perfil->getPermissao());
+
             $dateTime = new DateTime();
             $now = $dateTime->format('Y-m-d H:i:s');
-            $perfil->setAtualizadoEm($now);
+            $perfilParaAtualizar->setAtualizadoEm($now);
             
-            return parent::update($perfil);
+            return parent::update($perfilParaAtualizar);
         }
     }
 ?>

@@ -12,7 +12,14 @@
             
             if(isset($_SESSION['logado']) && $_SESSION['logado'] != '') {
                 $logado = unserialize($_SESSION['logado']);
-                $response = $this->perfilDao->retrievePerfis();
+                $todos = $this->perfilDao->retrievePerfis();
+                $response = array();
+                foreach($todos as &$perfil) {
+                    if($perfil->getPermissao() != 'Cliente') {
+                        $perfil->setSenha('<secret>');
+                        $response[] = $perfil;
+                    }
+                }
                 if($logado->getPermissao() != 'Administrador') {
                     foreach($response as &$perfil) {
                         if($perfil->getId() == $logado->getId()) {
@@ -89,9 +96,14 @@
 
             if($authenticated != null){
                 if(get_class($authenticated) != 'ResponseMessage') {
-                    $_SESSION['logado'] = serialize($authenticated);
-                    $message->setMessage('Olá, '.$authenticated->getNome().'!');
-                    $message->setStatus(ResponseMessage::STATUS_OK);
+                    if($authenticated->getPermissao() != 'Desativado') {
+                        $_SESSION['logado'] = serialize($authenticated);
+                        $message->setMessage('Olá, '.$authenticated->getNome().'!');
+                        $message->setStatus(ResponseMessage::STATUS_OK);
+                    }
+                    else {
+                        $message->setMessage('Usuário desativado, favor entrar em contato com Administrador.');
+                    }
                 }
                 else{
                     $message = $authenticated;

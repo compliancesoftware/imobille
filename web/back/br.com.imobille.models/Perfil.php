@@ -9,7 +9,7 @@
         private $criadoEm = null;
         private $atualizadoEm = null;
         private $ultimoAcesso = null;
-        private $permissao = null; //Pode ser 'Administrador','Gerente','Corretor','Marketing','Cliente'
+        private $permissao = null; //Pode ser 'Administrador','Gerente','Corretor','Marketing','Cliente','Desativado'
         
         public function setId($id) {
             $this->id = $id;

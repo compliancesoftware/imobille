@@ -18,7 +18,7 @@ html, body, .page, .content {
     color: gray;
 }
 
-.panel-conta input {
+.conta input, .conta select {
     margin-bottom: 0.5rem;
     width: 98.5%;
     width: -moz-available;
@@ -29,7 +29,11 @@ html, body, .page, .content {
     color: gray;
 }
 
-.panel-conta label {
+.conta select {
+    height: 2.2rem;
+}
+
+.conta label {
     margin-top: 1rem;
     color: #9d0a0e;
 }
@@ -54,11 +58,12 @@ html, body, .page, .content {
     border: black dotted 0.1rem;
     border-radius: 0.6rem;
     padding: 1rem;
+    padding-top: 0rem;
+    max-height: 26.5rem;
     overflow: auto;
 }
 
 .conta-foto {
-    cursor: pointer;
     margin: auto;
     margin-top: 1rem;
     height: 7.5rem;
@@ -78,11 +83,8 @@ html, body, .page, .content {
     border-radius: 0.5rem;
 }
 
-.conta-controlls-block {
-    background-color: red;
-    border: lightcoral solid 0.1rem;
-    float: left;
-    box-shadow: 1px 0 10px 1px red;
+.conta-controlls-button:hover {
+    box-shadow: unset;
 }
 
 .conta-controlls-edit {
@@ -90,6 +92,10 @@ html, body, .page, .content {
     border: lightgreen solid 0.1rem;
     float: right;
     box-shadow: 1px 0 10px 1px green;
+}
+
+.updatable-conta-foto {
+    cursor: pointer;
 }
 
 @media screen and (min-width: 44rem){
@@ -105,5 +111,9 @@ html, body, .page, .content {
         left: 16.25%;
         margin: auto;
         margin-bottom: 3.5rem;
+    }
+
+    .modal-conta {
+        left: 18.5%;
     }
 }
