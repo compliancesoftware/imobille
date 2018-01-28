@@ -8,13 +8,12 @@
 
     $perfil = new Perfil();
 
-    $perfil->setNome($_POST['nome']);
-    $perfil->setSenha($_POST['senha']);
-    $perfil->setEmail($_POST['email']);
-    $perfil->setTelefone($_POST['telefone']);
-    $foto = base64_encode(file_get_contents($_POST['foto']));
-    $perfil->setFoto($foto);
-    $perfil->setPermissao($_POST['permissao']);
+    $perfil->setNome($_POST['conta']['nome']);
+    $perfil->setSenha($_POST['conta']['senha']);
+    $perfil->setEmail($_POST['conta']['email']);
+    $perfil->setTelefone($_POST['conta']['telefone']);
+    $perfil->setFoto($_POST['conta']['foto']);
+    $perfil->setPermissao($_POST['conta']['permissao']);
 
     echo $service->createPerfil($perfil);
 ?>

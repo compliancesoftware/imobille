@@ -61,6 +61,7 @@ html, body, .page, .content {
     padding-top: 0rem;
     max-height: 26.5rem;
     overflow: auto;
+    margin-bottom: 0.5em;
 }
 
 .conta-foto {
@@ -96,6 +97,10 @@ html, body, .page, .content {
 
 .updatable-conta-foto {
     cursor: pointer;
+}
+
+.conta-bloqueada {
+    background-color: darksalmon;
 }
 
 @media screen and (min-width: 44rem){

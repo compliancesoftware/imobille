@@ -48,7 +48,42 @@
             if(isset($_SESSION['logado']) && $_SESSION['logado'] != '') {
                 $logado = unserialize($_SESSION['logado']);
                 if($logado->getPermissao() == 'Administrador') {
-                    $response = $this->perfilDao->createPerfil($perfil);
+                    if($perfil->getNome() != '') {
+                        if($perfil->getSenha() != '' && $perfil->getSenha() != '<secret>') {
+                            if($perfil->getEmail() != '') {
+                                if($perfil->getTelefone() != '' && $perfil->getTelefone() != '00000000000') {
+                                    if($perfil->getPermissao() == 'Administrador' || 
+                                       $perfil->getPermissao() != 'Gerente' || 
+                                       $perfil->getPermissao() != 'Marketing' || 
+                                       $perfil->getPermissao() != 'Corretor' || 
+                                       $perfil->getPermissao() != 'Gerente' || 
+                                       $perfil->getPermissao() != 'Desativado') {
+                                        $response = $this->perfilDao->createPerfil($perfil);
+                                    }
+                                    else {
+                                        $response = new ResponseMessage();
+                                        $response->setMessage('Permissão inválida.');
+                                    }
+                                }
+                                else {
+                                    $response = new ResponseMessage();
+                                    $response->setMessage('Telefone inválido.');
+                                }
+                            }
+                            else {
+                                $response = new ResponseMessage();
+                                $response->setMessage('E-mail inválido.');
+                            }
+                        }
+                        else {
+                            $response = new ResponseMessage();
+                            $response->setMessage('Senha inválida.');
+                        }
+                    }
+                    else {
+                        $response = new ResponseMessage();
+                        $response->setMessage('Nome inválido.');
+                    }
                 }
                 else {
                     $response = new ResponseMessage();
