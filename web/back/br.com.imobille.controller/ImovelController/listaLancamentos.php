@@ -28,10 +28,6 @@
     $endereco->setCep('52051395');
     $endereco->setLatitude('-8.0236299');
     $endereco->setLongitude('-34.91631');
-    $endereco->setCriadoEm(null);
-    $endereco->setCriadoPor(null);
-    $endereco->setAtualizadoEm(null);
-	$endereco->setAtualizadoPor(null);
 
     $construtora = new Construtora();
     $construtora->setId(1);

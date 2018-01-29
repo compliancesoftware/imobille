@@ -18,6 +18,84 @@ USE `imobilledb`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `cliente`
+--
+
+DROP TABLE IF EXISTS `cliente`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `cliente` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `endereco` bigint(20) NOT NULL,
+  `perfil` bigint(20) NOT NULL,
+  `podeReceberNotificacoes` tinyint(4) NOT NULL,
+  `ficaProntoAte` datetime NOT NULL COMMENT 'Usado como filtro de pesquisa de imovel.',
+  `temAcessibilidade` tinyint(4) NOT NULL COMMENT 'Usado filtro de imoveis.',
+  `elevadoresDeServico` int(11) NOT NULL,
+  `elevadoresSociais` int(11) NOT NULL,
+  `iniciaObrasEm` datetime NOT NULL,
+  `enderecoImovel` varchar(255) NOT NULL,
+  `construtora` varchar(100) NOT NULL,
+  `quartosComSuite` int(11) NOT NULL,
+  `quartosSemSuite` int(11) NOT NULL,
+  `tipoImovel` varchar(45) NOT NULL,
+  `modeloImovel` varchar(45) NOT NULL,
+  `salasDeJantar` int(11) NOT NULL,
+  `andares` varchar(45) NOT NULL,
+  `categoriaDeAndares` varchar(45) NOT NULL,
+  `temVaranda` tinyint(4) NOT NULL,
+  `temHomeOffice` tinyint(4) NOT NULL,
+  `areaUtil` double NOT NULL,
+  `vagasDeEstacionamento` int(11) NOT NULL,
+  `banheirosSociais` int(11) NOT NULL,
+  `posicaoDoSol` varchar(45) NOT NULL,
+  `preco` double NOT NULL,
+  `salasDeEstar` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `cliente`
+--
+
+LOCK TABLES `cliente` WRITE;
+/*!40000 ALTER TABLE `cliente` DISABLE KEYS */;
+/*!40000 ALTER TABLE `cliente` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `endereco`
+--
+
+DROP TABLE IF EXISTS `endereco`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `endereco` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `endereco` varchar(255) NOT NULL,
+  `bairro` varchar(50) NOT NULL,
+  `cidade` varchar(45) NOT NULL,
+  `estado` varchar(4) NOT NULL,
+  `complemento` varchar(255) DEFAULT NULL,
+  `numero` varchar(45) NOT NULL,
+  `cep` varchar(15) NOT NULL,
+  `latitude` varchar(45) DEFAULT NULL,
+  `longitude` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `endereco`
+--
+
+LOCK TABLES `endereco` WRITE;
+/*!40000 ALTER TABLE `endereco` DISABLE KEYS */;
+/*!40000 ALTER TABLE `endereco` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `perfil`
 --
 
@@ -109,4 +187,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-01-21 11:03:31
+-- Dump completed on 2018-01-29 15:26:32
