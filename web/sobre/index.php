@@ -11,6 +11,7 @@
             <?php require '../commons/navbar.php';?>
             <div class="content">
                 <div class="panel-sobre">
+                    <p class="panel-sobre-titulo"></p>
                     <p class="panel-sobre-texto"></p>
                     <p class="panel-sobre-telefone"></p>
                     <p class="panel-sobre-email"></p>

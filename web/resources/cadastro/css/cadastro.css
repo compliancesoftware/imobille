@@ -1,0 +1,29 @@
+.cadastro {
+    width: 100%;
+    padding: 0.5rem;
+    padding-top: 5rem;
+}
+
+.cadastro-link {
+    float: left;
+    width: 100%;
+    padding: 0.5rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.cadastro-link p {
+    width: 80%;
+    float: left;
+}
+
+.cadastro-link i {
+    float: right;
+    margin-right: 1rem;
+}
+
+.separador {
+    border-top: #9d0a0e solid 0.0625rem;
+    float: left;
+    width: 100%;
+}
